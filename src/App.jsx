@@ -3,7 +3,6 @@ import SplashScreen from './components/SplashScreen'
 import VipBar from './components/VipBar'
 import Navbar from './components/Navbar'
 import ParticleCanvas from './components/ParticleCanvas'
-import Hero from './components/Hero'
 import VslSection from './components/VslSection'
 import Comparison from './components/Comparison'
 import Process from './components/Process'
@@ -140,8 +139,6 @@ export default function App() {
       </div>
 
       <main className={`relative transition-opacity duration-700 pb-20 md:pb-0 ${splashDone ? 'opacity-100' : 'opacity-0'}`} style={{ zIndex: 1 }}>
-        <Hero />
-
         {/* Middle sections */}
         <div className="relative">
           <div className="sticky top-0 h-0 overflow-visible" style={{ zIndex: 200 }} />
