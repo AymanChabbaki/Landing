@@ -51,7 +51,7 @@ export default function Comparison() {
   const r3 = useReveal(250)
 
   return (
-    <section id="comparison" className="relative bg-white py-16 sm:py-32 overflow-hidden">
+    <section id="comparison" className="relative bg-slate-50 pt-16 pb-8 sm:py-32 overflow-hidden">
 
       {/* Subtle background dot grid */}
       <div className="absolute inset-0 pointer-events-none opacity-[0.035]"
@@ -143,13 +143,13 @@ export default function Comparison() {
         </div>
 
         {/* ─── Bottom accent ─── */}
-        <div ref={r3} className="reveal-el mt-16 pt-10 border-t border-slate-100 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+        <div ref={r3} className="reveal-el mt-6 pt-4 sm:mt-16 sm:pt-10 border-t border-slate-100 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
           <p className="text-sm text-slate-400">
             Résultats obtenus par nos clients importateurs B2B & e-commerçants.
           </p>
           <div className="flex items-center gap-2">
             <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
-            <span className="text-xs font-bold tracking-widest text-slate-500 uppercase">500+ dossiers validés</span>
+            <span className="text-xs font-bold tracking-widest text-slate-500 uppercase">5000+ dossiers validés</span>
           </div>
         </div>
 

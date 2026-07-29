@@ -57,13 +57,10 @@ export default function VslSection({ onCtaClick, onVideoPlayChange }) {
         
         {/* ─── MOBILE ONLY TITLE (Appears above video) ─── */}
         <div className="flex lg:hidden flex-col gap-3 mb-8 animate-fade-up opacity-0" style={{ animationDelay: '0.2s', animationFillMode: 'forwards' }}>
-          <h2 className="font-heading font-black text-[clamp(2.6rem,4.5vw,4rem)] leading-[1.06] tracking-tight text-slate-900">
-            Le Secret des Importateurs{' '}
-            <span className="text-[#0159A3]">Rentables</span>
+          <h2 className="font-heading font-black text-[clamp(2rem,7vw,2.5rem)] leading-[1.1] tracking-tight text-slate-900">
+            Le Secret des <br />
+            Importateurs <span className="text-[#0159A3]">Rentables</span>
           </h2>
-          <span className="text-sm font-bold tracking-[0.2em] text-orange-500 uppercase">
-            Pourquoi regarder cette vidéo ?
-          </span>
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-[1fr_1.3fr] gap-12 lg:gap-16 items-center">
@@ -74,13 +71,18 @@ export default function VslSection({ onCtaClick, onVideoPlayChange }) {
             {/* DESKTOP ONLY TITLE (Hidden on mobile) */}
             <div className="hidden lg:flex flex-col gap-7">
               <h2 className="font-heading font-black text-[clamp(2.6rem,4.5vw,4rem)] leading-[1.06] tracking-tight text-slate-900">
-                Le Secret des Importateurs{' '}
-                <span className="text-[#0159A3]">Rentables</span>
+                Le Secret des <br />
+                Importateurs <span className="text-[#0159A3]">Rentables</span>
               </h2>
               <span className="text-sm font-bold tracking-[0.2em] text-orange-500 uppercase">
                 Pourquoi regarder cette vidéo ?
               </span>
             </div>
+
+            {/* MOBILE ONLY EYEBROW (Appears below video) */}
+            <span className="lg:hidden text-sm font-bold tracking-[0.2em] text-orange-500 uppercase">
+              Pourquoi regarder cette vidéo ?
+            </span>
 
             {/* Sub-headline */}
             <p className="text-base sm:text-lg text-slate-700 leading-relaxed font-normal max-w-[520px]">

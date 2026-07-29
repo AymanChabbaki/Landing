@@ -73,12 +73,12 @@ export default function Testimonials() {
           </div>
 
           {/* ─── 3 Reel-sized video placeholders ─── */}
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
+          <div className="flex overflow-x-auto sm:grid sm:grid-cols-3 gap-5 sm:gap-6 pb-6 sm:pb-0 snap-x snap-mandatory [-ms-overflow-style:'none'] [scrollbar-width:'none'] [&::-webkit-scrollbar]:hidden">
             {testimonials.map((t, i) => (
               <div
                 key={i}
                 ref={refs[i]}
-                className="reveal-el group flex flex-col gap-4"
+                className="reveal-el group flex flex-col gap-4 w-[260px] sm:w-auto shrink-0 snap-center first:ml-4 sm:first:ml-0 last:mr-4 sm:last:mr-0"
               >
                 {/* Reel container: 9:16 portrait aspect ratio */}
                 <div
@@ -120,15 +120,24 @@ export default function Testimonials() {
                   )}
 
                   {/* Dark gradient at bottom of reel for name overlay */}
-                  <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-black/70 to-transparent pointer-events-none" />
-                  <div className="absolute bottom-4 left-4 text-white">
-                    <p className="font-bold text-sm leading-tight">{t.name}</p>
-                    <p className="text-xs text-white/75">{t.role} {t.city}</p>
+                  <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-black/80 to-transparent pointer-events-none z-10" />
+                  
+                  {/* Overlay content: Stars + Name */}
+                  <div className="absolute bottom-4 left-4 text-white z-20">
+                    <div className="flex items-center gap-0.5 mb-2 drop-shadow-md">
+                      {Array.from({ length: 5 }).map((_, si) => (
+                        <svg key={si} viewBox="0 0 24 24" fill="#FFC90D" className="w-4 h-4">
+                          <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                        </svg>
+                      ))}
+                    </div>
+                    <p className="font-bold text-sm leading-tight drop-shadow-md">{t.name}</p>
+                    <p className="text-xs text-white/90 drop-shadow-md">{t.role} {t.city}</p>
                   </div>
 
                   {/* Play button overlay (for when video is added) */}
                   {t.video && (
-                    <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-black/20">
+                    <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-black/20 z-30 pointer-events-none">
                       <div className="w-16 h-16 rounded-full bg-white flex items-center justify-center shadow-xl">
                         <svg viewBox="0 0 24 24" fill="currentColor" className="w-7 h-7 text-slate-900 ml-1">
                           <path d="M8 5v14l11-7z" />
@@ -136,16 +145,6 @@ export default function Testimonials() {
                       </div>
                     </div>
                   )}
-                </div>
-
-                {/* Below reel: Stars */}
-                <div className="flex items-center gap-1 px-1">
-                  {Array.from({ length: 5 }).map((_, si) => (
-                    <svg key={si} viewBox="0 0 24 24" fill="#FFC90D" className="w-4 h-4">
-                      <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
-                    </svg>
-                  ))}
-                  <span className="text-xs text-slate-400 ml-1 font-medium">5.0</span>
                 </div>
 
               </div>

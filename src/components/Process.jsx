@@ -64,7 +64,7 @@ export default function Process() {
   }, [activeStep])
 
   return (
-    <section id="process" className="relative bg-white py-16 sm:py-32 overflow-hidden">
+    <section id="process" className="relative bg-white pt-8 pb-16 sm:py-32 overflow-hidden">
 
       {/* Very subtle dot grid */}
       <div className="absolute inset-0 pointer-events-none opacity-[0.03]"
@@ -73,17 +73,17 @@ export default function Process() {
       <div className="max-w-[1100px] mx-auto px-6 sm:px-12">
 
         {/* ─── Header ─── */}
-        <div ref={r1} className="reveal-el mb-20">
+        <div ref={r1} className="reveal-el mb-8 md:mb-20">
           <span className="text-xs font-bold tracking-[0.3em] text-[#0159A3] uppercase mb-4 block">
             Le Processus
           </span>
           <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-4">
             <h2 className="font-heading font-black text-[clamp(2.5rem,5vw,4rem)] leading-[1.06] tracking-tight text-slate-900">
-              Notre Système en{' '}
-              <span className="text-[#0159A3]">3 Étapes</span>
+              Notre Système en <br />
+              <span className="text-[#0159A3]"> 3 Étapes</span>
             </h2>
             <p className="text-base text-slate-500 max-w-[340px] sm:text-right leading-relaxed pb-1">
-              Un processus éprouvé sur 500+ dossiers pour sécuriser chaque importation.
+              Un processus éprouvé sur 5000+ dossiers pour sécuriser chaque importation.
             </p>
           </div>
 
@@ -102,7 +102,7 @@ export default function Process() {
             </div>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-12 md:gap-6 relative z-10">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-5 md:gap-6 relative z-10">
             {steps.map((step, i) => {
               const isActive = i === activeStep
               const isPast = i < activeStep
@@ -114,7 +114,7 @@ export default function Process() {
                   onMouseEnter={() => setActiveStep(i)}
                 >
                   {/* Step dot + number */}
-                  <div className="flex md:flex-col items-center gap-4 md:gap-3 mb-6 w-full">
+                  <div className="flex md:flex-col items-center gap-4 md:gap-3 mb-2 md:mb-6 w-full">
                     <div className={`relative w-16 h-16 rounded-full flex items-center justify-center shrink-0 transition-all duration-500 ${
                       isActive
                         ? 'shadow-[0_0_0_6px_rgba(1,89,163,0.12)]'
