@@ -16,6 +16,9 @@ export default function Navbar({ onCtaClick }) {
   const scrollTo = (id) => {
     setMobileOpen(false)
     if (id === 'top') return window.scrollTo({ top: 0, behavior: 'smooth' })
+    if (id === 'form-section' && window.innerWidth < 768) {
+      id = 'vip-form-content'
+    }
     document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' })
   }
 

@@ -24,7 +24,8 @@ export default function App() {
   const isVideoPlayingRef = useRef(false)
 
   const scrollToForm = () => {
-    document.getElementById('form-section')?.scrollIntoView({ behavior: 'smooth' })
+    const isMobile = window.innerWidth < 768
+    document.getElementById(isMobile ? 'vip-form-content' : 'form-section')?.scrollIntoView({ behavior: 'smooth' })
   }
 
   const triggerTransit = () => {

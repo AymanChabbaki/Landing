@@ -29,7 +29,8 @@ export default function VslSection({ onCtaClick, onVideoPlayChange }) {
     if (onCtaClick) {
       onCtaClick()
     } else {
-      document.getElementById('form-section')?.scrollIntoView({ behavior: 'smooth' })
+      const targetId = window.innerWidth < 768 ? 'vip-form-content' : 'form-section'
+      document.getElementById(targetId)?.scrollIntoView({ behavior: 'smooth' })
     }
   }
 

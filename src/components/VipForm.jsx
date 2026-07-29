@@ -193,7 +193,7 @@ export default function VipForm() {
           </div>
 
           {/* Right Column: Form */}
-          <div ref={r2} className="reveal-el">
+          <div ref={r2} className="reveal-el scroll-mt-24" id="vip-form-content">
             {!submitted ? (
               <div>
                 {/* Step label + Progress */}
