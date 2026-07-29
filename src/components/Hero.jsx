@@ -7,9 +7,19 @@ export default function Hero() {
     <section id="hero" className="relative w-full h-screen min-h-[680px] flex items-center justify-center overflow-hidden bg-slate-950 text-white m-0 p-0">
       
       {/* ─── 100% Full Screen Video Background ─── */}
+      {/* Desktop Video */}
       <video
         src="/hero_vid.mp4"
-        className="absolute inset-0 w-full h-full object-cover opacity-90 z-0"
+        className="absolute inset-0 w-full h-full object-cover opacity-90 z-0 hidden md:block"
+        autoPlay
+        loop
+        muted
+        playsInline
+      />
+      {/* Mobile Video */}
+      <video
+        src="/hero_vid_phone.mp4"
+        className="absolute inset-0 w-full h-full object-cover opacity-90 z-0 md:hidden"
         autoPlay
         loop
         muted
