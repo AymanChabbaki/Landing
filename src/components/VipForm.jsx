@@ -164,7 +164,7 @@ export default function VipForm() {
 
             {/* WhatsApp contact */}
             <a
-              href="https://wa.me/212600000000"
+              href="https://wa.me/+212774004544"
               target="_blank"
               rel="noreferrer"
               className="mt-2 inline-flex items-center gap-3 text-sm font-bold text-emerald-600 hover:text-emerald-700 transition-colors"
