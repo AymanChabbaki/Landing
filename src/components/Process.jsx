@@ -85,7 +85,7 @@ export default function Process() {
               <span className="text-[#0159A3]"> 3 Étapes</span>
             </h2>
             <p className="text-base text-slate-500 max-w-[340px] sm:text-right leading-relaxed pb-1">
-              Un processus éprouvé sur 5000+ dossiers pour sécuriser chaque importation.
+              Un processus éprouvé sur 500+ dossiers pour sécuriser chaque importation.
             </p>
           </div>
 
