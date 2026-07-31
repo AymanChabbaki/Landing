@@ -50,10 +50,12 @@ export default function Process() {
   const r1 = useReveal()
   const r2 = useReveal(150)
 
-  // Auto-cycle steps
+  // Auto-cycle steps (desktop only to prevent layout jumps on mobile)
   useEffect(() => {
     const timer = setInterval(() => {
-      setActiveStep(prev => (prev + 1) % steps.length)
+      if (window.innerWidth >= 768) {
+        setActiveStep(prev => (prev + 1) % steps.length)
+      }
     }, 3200)
     return () => clearInterval(timer)
   }, [])
