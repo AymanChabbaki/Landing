@@ -130,7 +130,7 @@ export default function App() {
             <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-slate-900" />
           </span>
           <span className="relative z-10 uppercase tracking-wide">
-            Sécuriser Mon Importation
+            Sécuriser mon importation-exportation
           </span>
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" className="relative z-10 w-4 h-4 group-hover:translate-x-0.5 transition-transform">
             <line x1="5" y1="12" x2="19" y2="12" /><polyline points="12 5 19 12 12 19" />

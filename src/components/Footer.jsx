@@ -5,14 +5,8 @@ export default function Footer() {
   }
 
   return (
-    <footer className="relative bg-[#003862] text-white pt-24 pb-12 overflow-hidden">
+    <footer className="relative bg-gradient-to-b from-[#48CAE4] to-[#003862] text-white pt-24 pb-12 overflow-hidden">
       
-      {/* ─── Wave Curve Divider Top ─── */}
-      <div className="absolute top-0 left-0 right-0 overflow-hidden leading-none z-10">
-        <svg viewBox="0 0 1200 120" preserveAspectRatio="none" className="relative block w-full h-14 text-white fill-current">
-          <path d="M0,0 C150,90 350,-40 500,50 C650,140 900,10 1200,40 L1200,0 L0,0 Z"></path>
-        </svg>
-      </div>
 
       {/* Decorative Orbs in Footer */}
       <div className="absolute bottom-0 right-0 w-[500px] h-[500px] rounded-full bg-brand-blue/30 blur-[120px] pointer-events-none" />
@@ -24,7 +18,7 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-12 gap-12 lg:gap-8 items-start pb-16 border-b border-white/10">
           
           {/* ─── Column 1: Brand & Contact CTA ─── */}
-          <div className="md:col-span-5 flex flex-col items-start gap-6">
+          <div className="md:col-span-5 flex flex-col items-center md:items-start gap-6 text-center md:text-left">
             <a href="#" onClick={(e) => { e.preventDefault(); scrollTo('top') }}>
               <img src="/logo.svg" alt="Ultex PortNet" className="h-8 filter drop-shadow-md brightness-110" />
             </a>
@@ -47,12 +41,12 @@ export default function Footer() {
           </div>
 
           {/* ─── Column 2: Quick Links (with Vertical Divider) ─── */}
-          <div className="md:col-span-4 flex flex-col md:flex-row gap-8 items-start md:border-l md:border-white/15 md:pl-10">
-            <div className="flex flex-col gap-4">
+          <div className="md:col-span-4 flex flex-col items-center md:items-start gap-8 md:border-l md:border-white/15 md:pl-10 text-center md:text-left">
+            <div className="flex flex-col gap-4 items-center md:items-start">
               <h4 className="font-heading font-bold text-xs uppercase tracking-widest text-brand-gold">
                 NAVIGATION
               </h4>
-              <ul className="flex flex-col gap-3 font-heading font-semibold text-sm tracking-wide text-slate-200">
+              <ul className="flex flex-col gap-3 font-heading font-semibold text-sm tracking-wide text-slate-200 items-center md:items-start">
                 <li>
                   <button onClick={() => scrollTo('top')} className="hover:text-brand-gold transition-colors">
                     ACCUEIL
@@ -83,12 +77,12 @@ export default function Footer() {
           </div>
 
           {/* ─── Column 3: Social & Support (with Vertical Divider) ─── */}
-          <div className="md:col-span-3 flex flex-col gap-4 md:border-l md:border-white/15 md:pl-10">
+          <div className="md:col-span-3 flex flex-col items-center md:items-start gap-4 md:border-l md:border-white/15 md:pl-10 text-center md:text-left mt-4 md:mt-0">
             <h4 className="font-heading font-bold text-xs uppercase tracking-widest text-brand-gold">
               REJOIGNEZ-NOUS
             </h4>
 
-            <div className="flex flex-col gap-3">
+            <div className="flex flex-col gap-3 items-center md:items-start">
               <a href="https://instagram.com" target="_blank" rel="noreferrer" className="flex items-center gap-3 text-slate-200 hover:text-brand-gold transition-colors font-medium text-sm">
                 <div className="w-8 h-8 rounded-lg bg-white/10 flex items-center justify-center">
                   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" className="w-4 h-4"><rect x="2" y="2" width="20" height="20" rx="5" /><circle cx="12" cy="12" r="5" /><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none" /></svg>
@@ -112,8 +106,8 @@ export default function Footer() {
             </div>
 
             {/* WhatsApp Direct with custom SVG */}
-            <div className="mt-2 pt-3 border-t border-white/10">
-              <a href="https://wa.me/212600000000" target="_blank" rel="noreferrer" className="flex items-center gap-2.5 group">
+            <div className="mt-2 pt-3 border-t border-white/10 w-full flex justify-center md:justify-start">
+              <a href="https://wa.me/212600000000" target="_blank" rel="noreferrer" className="flex items-center justify-center md:justify-start gap-2.5 group">
                 <div className="w-8 h-8 rounded-lg bg-emerald-500/20 border border-emerald-400/30 flex items-center justify-center group-hover:scale-110 transition-transform">
                   <img src="/whatsapp-svgrepo-com.svg" alt="WhatsApp" className="w-4 h-4 object-contain" />
                 </div>
@@ -128,12 +122,10 @@ export default function Footer() {
         </div>
 
         {/* Bottom Credits & Copyright */}
-        <div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-400">
-          <p>© 2026 Ultex PortNet Tous droits réservés.</p>
+        <div className="pt-8 flex flex-col md:flex-row items-center justify-center md:justify-between gap-4 text-xs text-slate-200/80 text-center">
+          <p>© 2026 Ultex Accompagnement Import-Export. Tous droits réservés.</p>
           <p className="flex items-center gap-1">
             <span>Casablanca, Maroc</span>
-            <span>•</span>
-            <span>Spécialiste Douane B2B</span>
           </p>
         </div>
 

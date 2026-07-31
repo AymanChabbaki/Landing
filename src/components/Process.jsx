@@ -17,7 +17,7 @@ const steps = [
   },
   {
     num: '02',
-    title: 'Pré-Validation PortNet',
+    title: 'Pré-Validation',
     desc: "Vérification et correction de chaque document avant l'expédition. Votre dossier est soumis et validé dans le système PortNet.",
     detail: 'Déclaration anticipée, validation TIR & PortNet B2B, correction des codes nomenclature douanière zéro surprise à l\'arrivée.',
     icon: (
@@ -30,8 +30,8 @@ const steps = [
   },
   {
     num: '03',
-    title: 'Dédouanement Immédiat',
-    desc: 'Passage en douane sans blocage. Votre marchandise est libérée rapidement, livrée dans les délais, marge intacte.',
+    title: 'Accompagnement professionnel au dédouanement',
+    desc: 'Votre marchandise est libérée rapidement, livrée dans les délais, marge intacte.',
     detail: 'Mainlevée immédiate, coordination transitaire, suivi en temps réel jusqu\'à la livraison finale au Maroc.',
     icon: (
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" className="w-6 h-6">

@@ -37,29 +37,14 @@ export default function VslSection({ onCtaClick, onVideoPlayChange }) {
   return (
     <section id="vsl-section" className="relative bg-white overflow-hidden">
 
-      {/* ─── Animated Floating Background ─── */}
-      <div className="absolute inset-0 pointer-events-none overflow-hidden z-0 flex items-center justify-center">
-        {/* Floating elements spread across the background */}
-        <img src="/avionicon.png" alt="" className="absolute top-[10%] left-[8%] w-16 sm:w-20 opacity-20 animate-drift" style={{ animationDelay: '0s' }} />
-        <img src="/boaticon.png" alt="" className="absolute top-[65%] left-[4%] w-20 sm:w-28 opacity-15 animate-float-slow" style={{ animationDelay: '1s' }} />
-        <img src="/avionicon.png" alt="" className="absolute top-[20%] right-[6%] w-12 sm:w-16 opacity-25 animate-float" style={{ animationDelay: '2s' }} />
-        <img src="/boaticon.png" alt="" className="absolute bottom-[10%] right-[10%] w-24 sm:w-32 opacity-15 animate-drift" style={{ animationDelay: '0.5s' }} />
-        <img src="/avionicon.png" alt="" className="absolute top-[5%] left-[45%] w-20 sm:w-24 opacity-10 animate-float-slow" style={{ animationDelay: '3s' }} />
-        <img src="/boaticon.png" alt="" className="absolute bottom-[15%] left-[35%] w-16 sm:w-20 opacity-25 animate-float" style={{ animationDelay: '1.5s' }} />
-        <img src="/avionicon.png" alt="" className="absolute top-[80%] left-[60%] w-14 sm:w-16 opacity-20 animate-float-slow" style={{ animationDelay: '2.5s' }} />
-        <img src="/boaticon.png" alt="" className="absolute top-[45%] left-[55%] w-16 sm:w-20 opacity-15 animate-drift" style={{ animationDelay: '4s' }} />
-        <img src="/avionicon.png" alt="" className="absolute top-[35%] left-[20%] w-12 sm:w-14 opacity-20 animate-float" style={{ animationDelay: '0.8s' }} />
-        <img src="/boaticon.png" alt="" className="absolute top-[75%] right-[30%] w-16 sm:w-20 opacity-15 animate-float-slow" style={{ animationDelay: '3.5s' }} />
-      </div>
-
       {/* ─── MAIN SPLIT LAYOUT ─── */}
       <div className="relative z-10 max-w-[1360px] mx-auto px-6 sm:px-12 pt-16 pb-16 sm:pt-28 sm:pb-24">
         
         {/* ─── MOBILE ONLY TITLE (Appears above video) ─── */}
         <div className="flex lg:hidden flex-col gap-3 mb-8 animate-fade-up opacity-0" style={{ animationDelay: '0.2s', animationFillMode: 'forwards' }}>
-          <h2 className="font-heading font-black text-[clamp(2rem,7vw,2.5rem)] leading-[1.1] tracking-tight text-slate-900">
-            Le Secret des <br />
-            Importateurs <span className="text-[#0159A3]">Rentables</span>
+          <h2 className="font-heading font-black text-[clamp(2rem,7vw,2.5rem)] leading-[1.1] tracking-tight text-slate-900 text-center">
+            Rentabiliser vos opérations  <br />
+           <span className="text-[#0159A3]">d'import-export</span>
           </h2>
         </div>
 
@@ -71,8 +56,8 @@ export default function VslSection({ onCtaClick, onVideoPlayChange }) {
             {/* DESKTOP ONLY TITLE (Hidden on mobile) */}
             <div className="hidden lg:flex flex-col gap-7">
               <h2 className="font-heading font-black text-[clamp(2.6rem,4.5vw,4rem)] leading-[1.06] tracking-tight text-slate-900">
-                Le Secret des <br />
-                Importateurs <span className="text-[#0159A3]">Rentables</span>
+               Rentabiliser vos opérations  <br />
+               <span className="text-[#0159A3]">d'import-export</span>
               </h2>
               <span className="text-sm font-bold tracking-[0.2em] text-orange-500 uppercase">
                 Pourquoi regarder cette vidéo ?
@@ -86,7 +71,7 @@ export default function VslSection({ onCtaClick, onVideoPlayChange }) {
 
             {/* Sub-headline */}
             <p className="text-base sm:text-lg text-slate-700 leading-relaxed font-normal max-w-[520px]">
-              Sécurisez <strong className="text-slate-900">100% de votre dédouanement</strong> avant même l'embarquement de votre marchandise.
+              Sécurisez <strong className="text-slate-900">100% de vos import-export</strong> avant même l'embarquement de votre marchandise.
             </p>
 
             {/* Divider */}
@@ -94,7 +79,7 @@ export default function VslSection({ onCtaClick, onVideoPlayChange }) {
 
             {/* Body */}
             <p className="text-sm sm:text-base text-slate-500 leading-relaxed max-w-[500px]">
-              Ne laissez plus l'administration et les imprévus dicter vos marges. Regardez cette courte vidéo pour découvrir comment le <strong className="text-slate-800">Système d'Anticipation Ultex</strong> élimine définitivement les blocages en douane et les frais de magasinage.
+              Ne laissez plus les imprévus dicter vos marges. Regardez cette courte vidéo pour découvrir comment le <strong className="text-slate-800">Système d'Anticipation Ultex</strong> élimine définitivement les blocages en port et les frais de magasinage.
             </p>
 
             {/* Proof bullets */}
@@ -102,7 +87,7 @@ export default function VslSection({ onCtaClick, onVideoPlayChange }) {
               {[
                 { icon: 'shield', text: '0% de blocages au port sur 500+ dossiers traités' },
                 { icon: 'clock', text: 'Validation documentaire en moins de 24h' },
-                { icon: 'check', text: 'Conforme aux exigences PortNet & Douane B2B Maroc' },
+                { icon: 'check', text: 'Conforme aux normes PortNet et Douane' },
               ].map(({ icon, text }) => (
                 <li key={text} className="flex items-start gap-3">
                   <span className="mt-0.5 w-5 h-5 rounded-full bg-[#0159A3]/10 flex items-center justify-center shrink-0">
@@ -143,7 +128,7 @@ export default function VslSection({ onCtaClick, onVideoPlayChange }) {
                   backgroundSize: '250% 100%',
                 }} />
                 <span className="relative z-10 uppercase tracking-wide text-center leading-tight max-w-[220px] sm:max-w-none">
-                  JE VEUX SÉCURISER MA PROCHAINE IMPORTATION
+                  JE VEUX SÉCURISER MA PROCHAINE OPERATION
                 </span>
                 <span className={`relative z-10 w-7 h-7 sm:w-9 sm:h-9 rounded-full bg-slate-950 text-white flex items-center justify-center shrink-0 transition-all duration-300 group-hover:bg-[#0159A3] ${isFlying ? 'animate-plane-fly' : ''}`}>
                   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" className="w-4 h-4">
@@ -216,20 +201,14 @@ export default function VslSection({ onCtaClick, onVideoPlayChange }) {
                 />
               </div>
             </div>
-
-            {/* Bottom trust row — no box, just inline text */}
-            <div ref={r3} className="reveal-el flex items-center justify-between gap-4 pt-1">
-              <div className="flex items-center gap-2.5 text-xs text-slate-500">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="w-4 h-4 text-[#0159A3] shrink-0">
-                  <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
-                </svg>
-                <span>Certifié PortNet & Douane B2B Maroc</span>
-              </div>
+            {/* Bottom trust row */}
+            <div ref={r3} className="reveal-el flex items-center justify-end pt-2">
               <div className="flex items-center gap-2 text-xs font-bold text-emerald-600">
                 <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse" />
                 <span>100% Conforme</span>
               </div>
             </div>
+
 
           </div>
 

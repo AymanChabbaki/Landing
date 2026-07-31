@@ -31,18 +31,18 @@ function AnimatedCounter({ target }) {
 
 const dangerItems = [
   'Blocages au port pendant des semaines',
-  'Amendes douanières imprévues',
+  'Amendes diverses imprévues',
   'Retards de livraison coûteux',
   'Perte de marge et de clients',
   'Stress et incertitude constants',
 ]
 
 const successItems = [
-  'Dédouanement fluide et rapide',
+  'Processus fluide et rapide',
   'Conformité documentaire garantie',
   'Livraison dans les délais prévus',
   '100% de votre marge protégée',
-  'Sérénité totale à chaque importation',
+  'Sécurité totale à chaque opération',
 ]
 
 export default function Comparison() {
@@ -69,15 +69,15 @@ export default function Comparison() {
             <div className="font-heading font-black leading-none tracking-tighter text-slate-900"
               style={{ fontSize: 'clamp(6rem, 16vw, 12rem)' }}>
               <AnimatedCounter target={80} />
-              <span className="text-rose-500">%</span>
+              <span className="text-green-500">%</span>
             </div>
             {/* Subtitle right of number */}
             <div className="sm:pb-5 max-w-[380px]">
               <p className="text-xl sm:text-2xl font-bold text-slate-800 leading-snug">
-                Le Piège des Importateurs
+                des importateurs-exportateurs à succès
               </p>
               <p className="mt-2 text-sm sm:text-base text-slate-500 leading-relaxed">
-                des blocages en douane sont dus à un dossier mal préparé évitable à 100% avec la bonne méthode.
+               Se fait par la maîtrise des normes douanières et la préparation des documents.
               </p>
             </div>
           </div>
@@ -89,7 +89,35 @@ export default function Comparison() {
         {/* ─── Comparison: two columns, NO cards, just clean type rows ─── */}
         <div ref={r2} className="reveal-el grid grid-cols-1 lg:grid-cols-[1fr_64px_1fr] items-start gap-0">
 
-          {/* LEFT: Sans Pré-Validation */}
+
+          {/* RIGHT: Avec Ultex PortNet */}
+          <div>
+            <div className="flex items-center gap-3 mb-8 pb-4 border-b border-slate-100 mt-10 lg:mt-0">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="w-5 h-5 text-emerald-500 shrink-0">
+                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" /><polyline points="22 4 12 14.01 9 11.01" />
+              </svg>
+              <h3 className="font-heading font-bold text-lg text-slate-800">Avec Ultex</h3>
+            </div>
+            <ul className="flex flex-col gap-0">
+              {successItems.map((item, i) => (
+                <li key={i}
+                  className="flex items-center gap-4 py-5 text-slate-600 text-sm sm:text-base leading-snug border-b border-slate-100 last:border-0 group hover:text-slate-900 transition-colors duration-150"
+                >
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" className="w-4 h-4 text-emerald-500 shrink-0 group-hover:text-emerald-600 transition-colors">
+                    <polyline points="20 6 9 17 4 12" />
+                  </svg>
+                  {item}
+                </li>
+              ))}
+            </ul>
+          </div>
+          {/* CENTER: VS divider */}
+          <div className="hidden lg:flex flex-col items-center justify-start pt-2 gap-0 h-full">
+            <div className="flex-1 w-px bg-slate-100" style={{ minHeight: '40px' }} />
+            <span className="my-4 text-xs font-black tracking-[0.25em] text-slate-300 uppercase rotate-0">VS</span>
+            <div className="flex-1 w-px bg-slate-100" style={{ minHeight: '40px' }} />
+          </div>
+                    {/* LEFT: Sans Pré-Validation */}
           <div>
             <div className="flex items-center gap-3 mb-8 pb-4 border-b border-slate-100">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="w-5 h-5 text-rose-400 shrink-0">
@@ -111,45 +139,16 @@ export default function Comparison() {
             </ul>
           </div>
 
-          {/* CENTER: VS divider */}
-          <div className="hidden lg:flex flex-col items-center justify-start pt-2 gap-0 h-full">
-            <div className="flex-1 w-px bg-slate-100" style={{ minHeight: '40px' }} />
-            <span className="my-4 text-xs font-black tracking-[0.25em] text-slate-300 uppercase rotate-0">VS</span>
-            <div className="flex-1 w-px bg-slate-100" style={{ minHeight: '40px' }} />
-          </div>
-
-          {/* RIGHT: Avec Ultex PortNet */}
-          <div>
-            <div className="flex items-center gap-3 mb-8 pb-4 border-b border-slate-100 mt-10 lg:mt-0">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="w-5 h-5 text-emerald-500 shrink-0">
-                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" /><polyline points="22 4 12 14.01 9 11.01" />
-              </svg>
-              <h3 className="font-heading font-bold text-lg text-slate-800">Avec Ultex PortNet</h3>
-            </div>
-            <ul className="flex flex-col gap-0">
-              {successItems.map((item, i) => (
-                <li key={i}
-                  className="flex items-center gap-4 py-5 text-slate-600 text-sm sm:text-base leading-snug border-b border-slate-100 last:border-0 group hover:text-slate-900 transition-colors duration-150"
-                >
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" className="w-4 h-4 text-emerald-500 shrink-0 group-hover:text-emerald-600 transition-colors">
-                    <polyline points="20 6 9 17 4 12" />
-                  </svg>
-                  {item}
-                </li>
-              ))}
-            </ul>
-          </div>
-
         </div>
 
         {/* ─── Bottom accent ─── */}
         <div ref={r3} className="reveal-el mt-6 pt-4 sm:mt-16 sm:pt-10 border-t border-slate-100 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
           <p className="text-sm text-slate-400">
-            Résultats obtenus par nos clients importateurs B2B & e-commerçants.
+            Résultats obtenus par nos clients : entreprises et commerçants importateurs-exportateurs.
           </p>
           <div className="flex items-center gap-2">
             <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
-            <span className="text-xs font-bold tracking-widest text-slate-500 uppercase">5000+ dossiers validés</span>
+            <span className="text-xs font-bold tracking-widest text-slate-500 uppercase">500+ dossiers validés</span>
           </div>
         </div>
 
