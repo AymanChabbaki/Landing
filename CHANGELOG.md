@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.6.1] - 2026-08-01T15:44:20+01:00
+
+### Added
+- Added interactive top-right audio toggle button (Speaker On / Off icon) to testimonial reel cards in `src/components/Testimonials.jsx`.
+- Controlled video `muted` state dynamically per card via `unmutedMap` state.
+
+### Rationale & Architectural Decisions
+- Allows visitors to turn audio on/off directly while watching video reels on the landing page without requiring a full-screen modal trigger.
+
 ## [1.6.0] - 2026-08-01T15:43:00+01:00
 
 ### Added
