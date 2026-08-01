@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.6.2] - 2026-08-01T15:47:30+01:00
+
+### Changed
+- Refactored video playback in `src/components/Testimonials.jsx` to match the exact in-place play/pause pattern from `src/components/VslSection.jsx`.
+- Removed modal video popup to prevent unwanted overlays when tapping video cards.
+- Added native video controls upon play and central play button overlay when paused.
+
+### Rationale & Architectural Decisions
+- Provides a unified, intuitive video player experience across all sections of the landing page, eliminating unwanted popups on mobile and desktop.
+
 ## [1.6.1] - 2026-08-01T15:44:20+01:00
 
 ### Added
