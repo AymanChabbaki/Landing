@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.4.1] - 2026-08-01T15:17:35+01:00
+
+### Fixed
+- Added a `window._fbq_initialized` single-execution guard around Meta Pixel `fbq('init')` and `fbq('track', 'PageView')` in `index.html`.
+
+### Rationale & Architectural Decisions
+- Prevents duplicate PageView events caused by React HMR re-evaluations or double script mounting during local development and page re-renders.
+
 ## [1.4.0] - 2026-08-01T15:07:15+01:00
 
 ### Added
