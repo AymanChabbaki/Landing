@@ -42,7 +42,7 @@ export default function VslSection({ onCtaClick, onVideoPlayChange }) {
         
         {/* ─── MOBILE ONLY TITLE (Appears above video) ─── */}
         <div className="flex lg:hidden flex-col gap-3 mb-8 animate-fade-up opacity-0" style={{ animationDelay: '0.2s', animationFillMode: 'forwards' }}>
-          <h2 className="font-heading font-black text-[clamp(1.85rem,7vw,2.75rem)] leading-[1.12] tracking-tight text-slate-900 text-center">
+          <h2 className="font-heading font-black text-[clamp(1.85rem,7vw,2.75rem)] leading-[1.12] tracking-tight text-[#002B49] text-center">
             Rentabiliser vos opérations <br />
             <span className="text-[#0159A3] whitespace-nowrap inline-block text-[0.88em]">d'import-export</span>
           </h2>
@@ -55,7 +55,7 @@ export default function VslSection({ onCtaClick, onVideoPlayChange }) {
 
             {/* DESKTOP ONLY TITLE (Hidden on mobile) */}
             <div className="hidden lg:flex flex-col gap-7">
-              <h2 className="font-heading font-black text-[clamp(2.4rem,4vw,3.6rem)] leading-[1.08] tracking-tight text-slate-900">
+              <h2 className="font-heading font-black text-[clamp(2.4rem,4vw,3.6rem)] leading-[1.08] tracking-tight text-[#002B49]">
                 Rentabiliser vos opérations <br />
                 <span className="text-[#0159A3] whitespace-nowrap inline-block text-[0.88em]">d'import-export</span>
               </h2>

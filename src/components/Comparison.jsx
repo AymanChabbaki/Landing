@@ -66,7 +66,7 @@ export default function Comparison() {
           </span>
           <div className="flex flex-col sm:flex-row sm:items-end gap-4 sm:gap-8">
             {/* Big number */}
-            <div className="font-heading font-black leading-none tracking-tighter text-slate-900"
+            <div className="font-heading font-black leading-none tracking-tighter text-[#002B49]"
               style={{ fontSize: 'clamp(6rem, 16vw, 12rem)' }}>
               <AnimatedCounter target={80} />
               <span className="text-green-500">%</span>
@@ -123,7 +123,7 @@ export default function Comparison() {
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="w-5 h-5 text-rose-400 shrink-0">
                 <circle cx="12" cy="12" r="10" /><line x1="15" y1="9" x2="9" y2="15" /><line x1="9" y1="9" x2="15" y2="15" />
               </svg>
-              <h3 className="font-heading font-bold text-lg text-slate-800">Sans Pré-Validation</h3>
+              <h3 className="font-heading font-bold text-base sm:text-lg text-slate-800 whitespace-nowrap">Sans Pré-Validation</h3>
             </div>
             <ul className="flex flex-col gap-0">
               {dangerItems.map((item, i) => (

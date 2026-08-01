@@ -143,9 +143,9 @@ export default function VipForm() {
               Qualification VIP
             </span>
 
-            <h2 className="font-heading font-black text-[clamp(3rem,5vw,5rem)] leading-[1.06] tracking-tight text-slate-900">
+            <h2 className="font-heading font-black text-[clamp(1.85rem,6vw,4rem)] leading-[1.08] tracking-tight text-[#002B49]">
               Formulaire de{' '}
-              <span className="text-[#0159A3]">Pré-Validation</span>
+              <span className="text-[#0159A3] whitespace-nowrap inline-block">Pré-Validation</span>
             </h2>
 
             <p className="text-base text-slate-500 leading-relaxed max-w-[420px]">

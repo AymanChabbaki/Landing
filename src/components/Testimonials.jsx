@@ -19,12 +19,20 @@ const testimonials = [
     video: '/WhatsApp Video 2026-08-02 at 00.03.41.mp4',
   },
   {
+    name: 'Ahmed B.',
+    role: 'Sourcing Manager',
+    city: 'Casablanca',
+    initials: 'AB',
+    color: '#059669',
+    video: '/tem2.mp4',
+  },
+  {
     name: 'Omar L.',
     role: 'Importateur Multicanal',
     city: 'Tanger',
     initials: 'OL',
     color: '#6082B6',
-    video: '/tem2.mp4',
+    video: '/tem3.mov',
   },
 ]
 
@@ -37,7 +45,8 @@ export default function Testimonials() {
   const r2 = useReveal(100)
   const r3 = useReveal(200)
   const r4 = useReveal(300)
-  const refs = [r2, r3, r4]
+  const r5 = useReveal(400)
+  const refs = [r2, r3, r4, r5]
 
   const handlePlayClick = (i) => {
     const video = videoRefs.current[i]
@@ -72,7 +81,7 @@ export default function Testimonials() {
             Témoignages
           </span>
           <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-4">
-            <h2 className="font-heading font-black text-[clamp(2.5rem,5vw,4rem)] leading-[1.06] tracking-tight text-slate-900">
+            <h2 className="font-heading font-black text-[clamp(2.5rem,5vw,4rem)] leading-[1.06] tracking-tight text-[#002B49]">
               Ils Nous Font{' '}
               <span className="text-[#0159A3]">Confiance</span>
             </h2>
@@ -92,8 +101,8 @@ export default function Testimonials() {
 
         </div>
 
-        {/* ─── 3 Reel-sized video cards ─── */}
-        <div className="flex overflow-x-auto sm:grid sm:grid-cols-3 gap-5 sm:gap-6 pb-6 sm:pb-0 snap-x snap-mandatory [-ms-overflow-style:'none'] [scrollbar-width:'none'] [&::-webkit-scrollbar]:hidden">
+        {/* ─── 4 Reel-sized video cards ─── */}
+        <div className="flex overflow-x-auto sm:grid sm:grid-cols-2 lg:grid-cols-4 gap-5 sm:gap-6 pb-6 sm:pb-0 snap-x snap-mandatory [-ms-overflow-style:'none'] [scrollbar-width:'none'] [&::-webkit-scrollbar]:hidden">
           {testimonials.map((t, i) => (
             <div
               key={i}

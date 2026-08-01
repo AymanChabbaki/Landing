@@ -80,7 +80,7 @@ export default function Process() {
             Le Processus
           </span>
           <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-4">
-            <h2 className="font-heading font-black text-[clamp(2.5rem,5vw,4rem)] leading-[1.06] tracking-tight text-slate-900">
+            <h2 className="font-heading font-black text-[clamp(2.5rem,5vw,4rem)] leading-[1.06] tracking-tight text-[#002B49]">
               Notre Système en <br />
               <span className="text-[#0159A3]"> 3 Étapes</span>
             </h2>

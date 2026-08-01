@@ -2,6 +2,24 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.9.0] - 2026-08-02T00:26:00+01:00
+
+### Changed
+- Expanded `src/components/Testimonials.jsx` to feature 4 video cards in a responsive grid (`WhatsApp Video 1`, `WhatsApp Video 2`, `tem2.mp4`, `tem3.mov`).
+- Replaced harsh black text (`text-slate-900`) with Deep Midnight Navy (`text-[#002B49]`) across all main section headings (`VslSection`, `Process`, `Comparison`, `Testimonials`, `VipForm`).
+
+### Rationale & Architectural Decisions
+- Harmonizes header typography with brand colors (`#0159A3` blue and `#FFC90D` gold) while presenting all 4 client testimonial videos in a balanced layout.
+
+## [1.8.1] - 2026-08-02T00:23:35+01:00
+
+### Fixed
+- Added `whitespace-nowrap` to `"Sans Pré-Validation"` header in `src/components/Comparison.jsx`.
+- Added `whitespace-nowrap inline-block` to `"Pré-Validation"` and adjusted heading font scaling in `src/components/VipForm.jsx`.
+
+### Rationale & Architectural Decisions
+- Prevents `"Pré-Validation"` and `"Sans Pré-Validation"` from wrapping or splitting across multiple lines on small mobile screens.
+
 ## [1.8.0] - 2026-08-02T00:21:00+01:00
 
 ### Changed

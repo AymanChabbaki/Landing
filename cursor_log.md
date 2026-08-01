@@ -1,5 +1,30 @@
 # Cursor Log
 
+## [2026-08-02T00:26:00+01:00] Execution & Verification Log
+
+### Changes Executed
+- Modified [src/components/Testimonials.jsx](file:///c:/Users/HP%20ZBOOK/Desktop/Landing/src/components/Testimonials.jsx):
+  - Updated grid to 4 testimonial video cards (`WhatsApp Video 1`, `WhatsApp Video 2`, `tem2.mp4`, `tem3.mov`).
+  - Set section H2 color to Deep Midnight Navy (`text-[#002B49]`).
+- Modified [src/components/VslSection.jsx](file:///c:/Users/HP%20ZBOOK/Desktop/Landing/src/components/VslSection.jsx): Updated H2 color to `text-[#002B49]`.
+- Modified [src/components/Process.jsx](file:///c:/Users/HP%20ZBOOK/Desktop/Landing/src/components/Process.jsx): Updated H2 color to `text-[#002B49]`.
+- Modified [src/components/Comparison.jsx](file:///c:/Users/HP%20ZBOOK/Desktop/Landing/src/components/Comparison.jsx): Updated 80% counter header color to `text-[#002B49]`.
+- Modified [src/components/VipForm.jsx](file:///c:/Users/HP%20ZBOOK/Desktop/Landing/src/components/VipForm.jsx): Updated H2 color to `text-[#002B49]`.
+- Updated [CHANGELOG.md](file:///c:/Users/HP%20ZBOOK/Desktop/Landing/CHANGELOG.md).
+
+### Verification
+- 4-card testimonial grid and unified Deep Midnight Navy (`text-[#002B49]`) heading colors verified clean across all section components.
+
+## [2026-08-02T00:23:35+01:00] Execution & Verification Log
+
+### Changes Executed
+- Modified [src/components/Comparison.jsx](file:///c:/Users/HP%20ZBOOK/Desktop/Landing/src/components/Comparison.jsx): Added `whitespace-nowrap text-base sm:text-lg` to `"Sans Pré-Validation"` header.
+- Modified [src/components/VipForm.jsx](file:///c:/Users/HP%20ZBOOK/Desktop/Landing/src/components/VipForm.jsx): Added `whitespace-nowrap inline-block` to `"Pré-Validation"` and adjusted clamp font scaling.
+- Updated [CHANGELOG.md](file:///c:/Users/HP%20ZBOOK/Desktop/Landing/CHANGELOG.md).
+
+### Verification
+- Both headers verified with `whitespace-nowrap` to prevent line wrapping on mobile.
+
 ## [2026-08-02T00:21:00+01:00] Execution & Verification Log
 
 ### Changes Executed
