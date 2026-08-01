@@ -3,6 +3,14 @@ import useReveal from '../hooks/useReveal'
 
 const testimonials = [
   {
+    name: 'Ahmed B.',
+    role: 'Sourcing Manager',
+    city: 'Casablanca',
+    initials: 'AB',
+    color: '#059669',
+    video: '/tem2.mp4',
+  },
+  {
     name: 'Karim M.',
     role: 'Importateur Textile',
     city: 'Casablanca',
@@ -17,14 +25,6 @@ const testimonials = [
     initials: 'YK',
     color: '#7C3AED',
     video: '/WhatsApp Video 2026-08-02 at 00.03.41.mp4',
-  },
-  {
-    name: 'Ahmed B.',
-    role: 'Sourcing Manager',
-    city: 'Casablanca',
-    initials: 'AB',
-    color: '#059669',
-    video: '/tem2.mp4',
   },
   {
     name: 'Omar L.',
