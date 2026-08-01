@@ -54,6 +54,7 @@ const trustPoints = [
 
 export default function VipForm() {
   const [submitted, setSubmitted] = useState(false)
+  const [submitting, setSubmitting] = useState(false)
   const [formData, setFormData] = useState({
     nom: '', produit: '', pays: '', whatsapp: ''
   })
@@ -76,10 +77,28 @@ export default function VipForm() {
     return Object.keys(errs).length === 0
   }
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault()
     if (!validateForm()) return
+    setSubmitting(true)
+
+    const webhookUrl = import.meta.env.VITE_GOOGLE_SHEETS_WEBHOOK_URL
+
+    if (webhookUrl) {
+      try {
+        await fetch(webhookUrl, {
+          method: 'POST',
+          headers: { 'Content-Type': 'text/plain;charset=utf-8' },
+          body: JSON.stringify(formData),
+        })
+      } catch (err) {
+        console.error('Google Sheets submission error:', err)
+      }
+    }
+
     setSubmitted(true)
+    setSubmitting(false)
+
     if (typeof window !== 'undefined' && window.fbq) {
       window.fbq('track', 'Lead', {
         content_name: 'Formulaire de Pré-Validation VIP',
@@ -214,17 +233,21 @@ export default function VipForm() {
 
                   {/* Submit Button */}
                   <div className="mt-8">
-                    <button type="submit"
-                      className="w-full flex justify-center items-center gap-3 px-7 py-4 rounded-xl text-sm font-extrabold text-slate-950 transition-all duration-200 hover:-translate-y-0.5 hover:shadow-xl overflow-hidden relative"
+                    <button type="submit" disabled={submitting}
+                      className="w-full flex justify-center items-center gap-3 px-7 py-4 rounded-xl text-sm font-extrabold text-slate-950 transition-all duration-200 hover:-translate-y-0.5 hover:shadow-xl overflow-hidden relative disabled:opacity-75 disabled:cursor-not-allowed"
                       style={{ background: 'linear-gradient(135deg, #FFC90D, #ffe066)', boxShadow: '0 8px 25px rgba(255,201,13,0.35)' }}>
                       <span className="absolute inset-0 animate-shimmer" style={{
                         background: 'linear-gradient(105deg, transparent 25%, rgba(255,255,255,0.4) 45%, rgba(255,255,255,0.6) 50%, rgba(255,255,255,0.4) 55%, transparent 75%)',
                         backgroundSize: '250% 100%',
                       }} />
-                      <span className="relative z-10">ENVOYER MA DEMANDE VIP</span>
-                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" className="w-4 h-4 relative z-10">
-                        <line x1="5" y1="12" x2="19" y2="12" /><polyline points="12 5 19 12 12 19" />
-                      </svg>
+                      <span className="relative z-10">{submitting ? 'ENVOI EN COURS...' : 'ENVOYER MA DEMANDE VIP'}</span>
+                      {submitting ? (
+                        <div className="w-4 h-4 border-2 border-slate-950/30 border-t-slate-950 rounded-full animate-spin relative z-10" />
+                      ) : (
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" className="w-4 h-4 relative z-10">
+                          <line x1="5" y1="12" x2="19" y2="12" /><polyline points="12 5 19 12 12 19" />
+                        </svg>
+                      )}
                     </button>
                   </div>
                 </form>

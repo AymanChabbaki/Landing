@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.5.0] - 2026-08-01T15:18:45+01:00
+
+### Added
+- Added asynchronous POST submission handler to `src/components/VipForm.jsx` for sending form submissions (`nom`, `produit`, `pays`, `whatsapp`) to `VITE_GOOGLE_SHEETS_WEBHOOK_URL`.
+- Added loading state indicator on the submit button (`submitting` spinner).
+
+### Rationale & Architectural Decisions
+- Automatically logs all VIP lead submissions into Google Sheets via Google Apps Script Web App without requiring third-party server infrastructure.
+
 ## [1.4.1] - 2026-08-01T15:17:35+01:00
 
 ### Fixed

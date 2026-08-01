@@ -1,5 +1,25 @@
 # Cursor Log
 
+## [2026-08-01T15:18:45+01:00] Execution & Verification Log
+
+### Changes Executed
+- Modified [src/components/VipForm.jsx](file:///c:/Users/HP%20ZBOOK/Desktop/Landing/src/components/VipForm.jsx):
+  - Updated `handleSubmit` to POST form data asynchronously to `VITE_GOOGLE_SHEETS_WEBHOOK_URL`.
+  - Added loading indicator & disabled state during submission.
+- Updated [CHANGELOG.md](file:///c:/Users/HP%20ZBOOK/Desktop/Landing/CHANGELOG.md).
+
+### Verification
+- Asynchronous POST submission logic and submitting state verified.
+
+## [2026-08-01T15:17:35+01:00] Execution & Verification Log
+
+### Changes Executed
+- Modified [index.html](file:///c:/Users/HP%20ZBOOK/Desktop/Landing/index.html): Added `if (!window._fbq_initialized)` guard around `fbq('init')` and `fbq('track', 'PageView')`.
+- Updated [CHANGELOG.md](file:///c:/Users/HP%20ZBOOK/Desktop/Landing/CHANGELOG.md).
+
+### Verification
+- Single-initialization guard verified in `index.html`.
+
 ## [2026-08-01T15:07:15+01:00] Execution & Verification Log
 
 ### Changes Executed
