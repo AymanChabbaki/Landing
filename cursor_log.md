@@ -1,5 +1,16 @@
 # Cursor Log
 
+## [2026-08-01T15:44:20+01:00] Execution & Verification Log
+
+### Changes Executed
+- Modified [src/components/Testimonials.jsx](file:///c:/Users/HP%20ZBOOK/Desktop/Landing/src/components/Testimonials.jsx):
+  - Added `unmutedMap` state and `toggleSound` handler.
+  - Added top-right sound Mute/Unmute button to video reel cards with dynamic SVG icons.
+- Updated [CHANGELOG.md](file:///c:/Users/HP%20ZBOOK/Desktop/Landing/CHANGELOG.md).
+
+### Verification
+- Audio toggle button and state management verified in `Testimonials.jsx`.
+
 ## [2026-08-01T15:43:00+01:00] Execution & Verification Log
 
 ### Changes Executed
