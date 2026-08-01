@@ -82,7 +82,7 @@ export default function VipForm() {
     if (!validateForm()) return
     setSubmitting(true)
 
-    const webhookUrl = import.meta.env.VITE_GOOGLE_SHEETS_WEBHOOK_URL
+    const webhookUrl = import.meta.env.VITE_GOOGLE_SHEETS_WEBHOOK_URL || 'https://script.google.com/macros/s/AKfycbz5i1Ngwn1fx_Xx5PTGbWOhj4CIldXrlQs7-gB8AVkOCt85dGii-Eqyc-zWwYz6AU71sA/exec'
 
     if (webhookUrl) {
       try {

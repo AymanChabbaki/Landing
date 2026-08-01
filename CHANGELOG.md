@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.5.1] - 2026-08-01T15:27:50+01:00
+
+### Added
+- Configured Google Apps Script Web App URL (`https://script.google.com/macros/s/AKfycbz5i1Ngwn1fx_Xx5PTGbWOhj4CIldXrlQs7-gB8AVkOCt85dGii-Eqyc-zWwYz6AU71sA/exec`) in `.env.local` and set default fallback URL in `src/components/VipForm.jsx`.
+
+### Rationale & Architectural Decisions
+- Provides instant out-of-the-box form submission logging directly into the user's Google Sheet across local and production builds.
+
 ## [1.5.0] - 2026-08-01T15:18:45+01:00
 
 ### Added
