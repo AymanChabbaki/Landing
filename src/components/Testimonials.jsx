@@ -30,11 +30,17 @@ const testimonials = [
 
 export default function Testimonials() {
   const [modalVideo, setModalVideo] = useState(null)
+  const [unmutedMap, setUnmutedMap] = useState({})
   const r1 = useReveal()
   const r2 = useReveal(100)
   const r3 = useReveal(200)
   const r4 = useReveal(300)
   const refs = [r2, r3, r4]
+
+  const toggleSound = (i, e) => {
+    e.stopPropagation()
+    setUnmutedMap(prev => ({ ...prev, [i]: !prev[i] }))
+  }
 
   return (
     <>
@@ -86,12 +92,36 @@ export default function Testimonials() {
                   style={{ aspectRatio: '9 / 16' }}
                   onClick={() => t.video && setModalVideo(t.video)}
                 >
+                  {/* Audio Mute/Unmute Toggle Button */}
+                  {t.video && (
+                    <button
+                      type="button"
+                      onClick={(e) => toggleSound(i, e)}
+                      className="absolute top-3 right-3 z-40 w-9 h-9 rounded-full bg-black/60 backdrop-blur-md border border-white/20 text-white flex items-center justify-center shadow-lg hover:scale-110 active:scale-95 transition-all duration-200"
+                      aria-label={unmutedMap[i] ? 'Désactiver le son' : 'Activer le son'}
+                      title={unmutedMap[i] ? 'Désactiver le son' : 'Activer le son'}
+                    >
+                      {unmutedMap[i] ? (
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="w-4 h-4 text-emerald-400">
+                          <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5" />
+                          <path d="M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07" />
+                        </svg>
+                      ) : (
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="w-4 h-4 text-white/80">
+                          <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5" />
+                          <line x1="23" y1="9" x2="17" y2="15" />
+                          <line x1="17" y1="9" x2="23" y2="15" />
+                        </svg>
+                      )}
+                    </button>
+                  )}
+
                   {t.video ? (
                     <video
                       src={t.video}
                       className="w-full h-full object-cover"
                       playsInline
-                      muted
+                      muted={!unmutedMap[i]}
                       loop
                       autoPlay
                     />
