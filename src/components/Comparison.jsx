@@ -91,7 +91,7 @@ export default function Comparison() {
 
 
           {/* RIGHT: Avec accompagnement Ultex */}
-          <div>
+          <div className="mb-8 sm:mb-14 lg:mb-0">
             <div className="flex items-center gap-3 mb-3 pb-2 sm:mb-8 sm:pb-4 border-b border-slate-100 mt-0">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="w-5 h-5 text-emerald-500 shrink-0">
                 <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" /><polyline points="22 4 12 14.01 9 11.01" />
@@ -101,7 +101,7 @@ export default function Comparison() {
             <ul className="flex flex-col gap-0">
               {successItems.map((item, i) => (
                 <li key={i}
-                  className="flex items-center gap-4 py-3 sm:py-5 text-slate-600 text-sm sm:text-base leading-snug border-b border-slate-100 last:border-0 group hover:text-slate-900 transition-colors duration-150"
+                  className="flex items-center gap-4 py-2 sm:py-4 text-slate-600 text-sm sm:text-base leading-snug border-b border-slate-100 last:border-0 group hover:text-slate-900 transition-colors duration-150"
                 >
                   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" className="w-4 h-4 text-emerald-500 shrink-0 group-hover:text-emerald-600 transition-colors">
                     <polyline points="20 6 9 17 4 12" />
@@ -128,7 +128,7 @@ export default function Comparison() {
             <ul className="flex flex-col gap-0">
               {dangerItems.map((item, i) => (
                 <li key={i}
-                  className="flex items-center gap-4 py-3 sm:py-5 text-slate-600 text-sm sm:text-base leading-snug border-b border-slate-100 last:border-0 group hover:text-slate-900 transition-colors duration-150"
+                  className="flex items-center gap-4 py-2 sm:py-3 text-slate-600 text-sm sm:text-base leading-snug border-b border-slate-100 last:border-0 group hover:text-slate-900 transition-colors duration-150"
                 >
                   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" className="w-4 h-4 text-rose-400 shrink-0 group-hover:text-rose-500 transition-colors">
                     <line x1="18" y1="6" x2="6" y2="18" /><line x1="6" y1="6" x2="18" y2="18" />

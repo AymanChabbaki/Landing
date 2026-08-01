@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.5.2] - 2026-08-01T15:32:00+01:00
+
+### Changed
+- Reduced vertical padding between `<li>` items in `src/components/Comparison.jsx` from `py-3 sm:py-5` to `py-2 sm:py-3.5`.
+- Added vertical margin (`mb-8 sm:mb-14 lg:mb-0`) to the "Avec accompagnement Ultex" column wrapper in `src/components/Comparison.jsx` on mobile screens to match the spacing above the section.
+
+### Rationale & Architectural Decisions
+- Compacts comparison points vertically and creates consistent, equalized visual spacing between stacked comparison blocks on phone viewports.
+
 ## [1.5.1] - 2026-08-01T15:27:50+01:00
 
 ### Added

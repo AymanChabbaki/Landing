@@ -1,5 +1,26 @@
 # Cursor Log
 
+## [2026-08-01T15:32:00+01:00] Execution & Verification Log
+
+### Changes Executed
+- Modified [src/components/Comparison.jsx](file:///c:/Users/HP%20ZBOOK/Desktop/Landing/src/components/Comparison.jsx):
+  - Reduced vertical padding between `li` items (`py-2 sm:py-3.5`).
+  - Added bottom margin (`mb-8 sm:mb-14 lg:mb-0`) to "Avec accompagnement Ultex" container to equalize column spacing on mobile.
+- Updated [CHANGELOG.md](file:///c:/Users/HP%20ZBOOK/Desktop/Landing/CHANGELOG.md).
+
+### Verification
+- Component syntax & responsive layout verified clean in `Comparison.jsx`.
+
+## [2026-08-01T15:27:50+01:00] Execution & Verification Log
+
+### Changes Executed
+- Modified [.env.local](file:///c:/Users/HP%20ZBOOK/Desktop/Landing/.env.local): Added `VITE_GOOGLE_SHEETS_WEBHOOK_URL` (`https://script.google.com/macros/s/AKfycbz5i1Ngwn1fx_Xx5PTGbWOhj4CIldXrlQs7-gB8AVkOCt85dGii-Eqyc-zWwYz6AU71sA/exec`).
+- Modified [src/components/VipForm.jsx](file:///c:/Users/HP%20ZBOOK/Desktop/Landing/src/components/VipForm.jsx): Set `webhookUrl` fallback to the user's Google Apps Script URL.
+- Updated [CHANGELOG.md](file:///c:/Users/HP%20ZBOOK/Desktop/Landing/CHANGELOG.md).
+
+### Verification
+- Webhook URL configuration and fallback logic in `VipForm.jsx` verified.
+
 ## [2026-08-01T15:18:45+01:00] Execution & Verification Log
 
 ### Changes Executed
