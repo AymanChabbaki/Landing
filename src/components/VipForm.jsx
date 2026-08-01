@@ -76,7 +76,17 @@ export default function VipForm() {
     return Object.keys(errs).length === 0
   }
 
-  const handleSubmit = (e) => { e.preventDefault(); if (!validateForm()) return; setSubmitted(true) }
+  const handleSubmit = (e) => {
+    e.preventDefault()
+    if (!validateForm()) return
+    setSubmitted(true)
+    if (typeof window !== 'undefined' && window.fbq) {
+      window.fbq('track', 'Lead', {
+        content_name: 'Formulaire de Pré-Validation VIP',
+        status: 'submitted',
+      })
+    }
+  }
 
   const inputCls = (field) =>
     `w-full px-5 py-4 rounded-xl border outline-none text-base transition-all duration-200 bg-white text-slate-900 placeholder:text-slate-400 focus:shadow-[0_0_0_3px_rgba(1,89,163,0.12)] ${
@@ -88,7 +98,7 @@ export default function VipForm() {
   const stepLabels = ['Vos coordonnées', 'Votre profil', 'Votre projet']
 
   return (
-    <section id="form-section" className="relative bg-white py-16 sm:py-40 overflow-hidden">
+    <section id="form-section" className="relative bg-white pt-8 pb-16 sm:pt-24 sm:pb-32 overflow-hidden">
 
       {/* Pulsing glow border around entire section */}
       <div className="absolute inset-0 pointer-events-none"
@@ -106,7 +116,7 @@ export default function VipForm() {
       <div className="max-w-[1400px] mx-auto px-6 sm:px-16">
 
         {/* ─── Two-column: Left headline, Right Form ─── */}
-        <div className="grid grid-cols-1 lg:grid-cols-[1fr_1.4fr] gap-20 lg:gap-28 items-start">
+        <div className="grid grid-cols-1 lg:grid-cols-[1fr_1.4fr] gap-8 sm:gap-12 lg:gap-28 items-start">
 
           {/* Left Column: Text / Trust */}
           <div ref={r1} className="reveal-el flex flex-col gap-7 lg:sticky lg:top-24">
@@ -161,23 +171,10 @@ export default function VipForm() {
                 </li>
               ))}
             </ul>
-
-            {/* WhatsApp contact */}
-            <a
-              href="https://wa.me/+212774004544"
-              target="_blank"
-              rel="noreferrer"
-              className="mt-2 inline-flex items-center gap-3 text-sm font-bold text-emerald-600 hover:text-emerald-700 transition-colors"
-            >
-              <span className="w-9 h-9 rounded-xl bg-emerald-50 border border-emerald-200 flex items-center justify-center">
-                <img src="/whatsapp-svgrepo-com.svg" alt="WhatsApp" className="w-5 h-5" />
-              </span>
-              Contacter directement via WhatsApp
-            </a>
           </div>
 
           {/* Right Column: Form */}
-          <div ref={r2} className="reveal-el scroll-mt-24" id="vip-form-content">
+          <div ref={r2} className="reveal-el scroll-mt-12" id="vip-form-content">
             {!submitted ? (
               <div>
                 {/* Form Header */}

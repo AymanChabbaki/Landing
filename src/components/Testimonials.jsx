@@ -38,7 +38,7 @@ export default function Testimonials() {
 
   return (
     <>
-      <section id="testimonials" className="relative bg-white py-16 sm:py-32 overflow-hidden">
+      <section id="testimonials" className="relative bg-white pt-6 pb-16 sm:py-32 overflow-hidden">
 
         {/* Subtle dot texture */}
         <div className="absolute inset-0 pointer-events-none opacity-[0.03]"

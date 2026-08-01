@@ -66,7 +66,7 @@ export default function Process() {
   }, [activeStep])
 
   return (
-    <section id="process" className="relative bg-white pt-8 pb-16 sm:py-32 overflow-hidden">
+    <section id="process" className="relative bg-white pt-8 pb-4 sm:py-32 overflow-hidden">
 
       {/* Very subtle dot grid */}
       <div className="absolute inset-0 pointer-events-none opacity-[0.03]"
@@ -177,19 +177,6 @@ export default function Process() {
                 </div>
               )
             })}
-          </div>
-
-          {/* Mobile step indicator */}
-          <div className="flex items-center justify-center gap-2 mt-10 md:hidden">
-            {steps.map((_, i) => (
-              <button
-                key={i}
-                onClick={() => setActiveStep(i)}
-                className={`rounded-full transition-all duration-300 ${
-                  i === activeStep ? 'w-6 h-2 bg-[#0159A3]' : 'w-2 h-2 bg-slate-200'
-                }`}
-              />
-            ))}
           </div>
 
         </div>
