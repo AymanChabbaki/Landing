@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.6.0] - 2026-08-01T15:43:00+01:00
+
+### Added
+- Connected `/tem1.mp4`, `/tem2.mp4`, and `/tem3.mov` to testimonial reel cards in `src/components/Testimonials.jsx`.
+- Enabled silent background video preview looping (`autoPlay muted loop playsInline`) on reel cards.
+
+### Rationale & Architectural Decisions
+- Replaces static video placeholders with active, real testimonial video reels, enhancing social proof and engagement.
+
 ## [1.5.2] - 2026-08-01T15:32:00+01:00
 
 ### Changed

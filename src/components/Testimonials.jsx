@@ -8,7 +8,7 @@ const testimonials = [
     city: 'Casablanca',
     initials: 'AB',
     color: '#0159A3',
-    // video: '/testimonial-ahmed.mp4'  ← add video file here later
+    video: '/tem1.mp4',
   },
   {
     name: 'Karim M.',
@@ -16,15 +16,15 @@ const testimonials = [
     city: 'Rabat',
     initials: 'KM',
     color: '#7C3AED',
-    // video: '/testimonial-karim.mp4'  ← add video file here later
+    video: '/tem2.mp4',
   },
   {
-    name: 'Sofia L.',
-    role: 'Sourcing Manager',
+    name: 'Omar L.',
+    role: 'Importateur Multicanal',
     city: 'Tanger',
-    initials: 'SL',
-    color: '#059669',
-    // video: '/testimonial-sofia.mp4'  ← add video file here later
+    initials: 'OL',
+    color: '#6082B6',
+    video: '/tem3.mov',
   },
 ]
 
@@ -93,6 +93,7 @@ export default function Testimonials() {
                       playsInline
                       muted
                       loop
+                      autoPlay
                     />
                   ) : (
                     /* Placeholder while video not yet added */

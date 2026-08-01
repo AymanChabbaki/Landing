@@ -1,5 +1,16 @@
 # Cursor Log
 
+## [2026-08-01T15:43:00+01:00] Execution & Verification Log
+
+### Changes Executed
+- Modified [src/components/Testimonials.jsx](file:///c:/Users/HP%20ZBOOK/Desktop/Landing/src/components/Testimonials.jsx):
+  - Connected video paths `/tem1.mp4`, `/tem2.mp4`, and `/tem3.mov`.
+  - Added `autoPlay` attribute to `<video>` for background looping reel previews.
+- Updated [CHANGELOG.md](file:///c:/Users/HP%20ZBOOK/Desktop/Landing/CHANGELOG.md).
+
+### Verification
+- All 3 testimonial reel cards verified connected to video files (`tem1.mp4`, `tem2.mp4`, `tem3.mov`).
+
 ## [2026-08-01T15:32:00+01:00] Execution & Verification Log
 
 ### Changes Executed
