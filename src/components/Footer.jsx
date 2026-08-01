@@ -5,7 +5,7 @@ export default function Footer() {
   }
 
   return (
-    <footer className="relative bg-gradient-to-b from-[#48CAE4] to-[#003862] text-white pt-24 pb-12 overflow-hidden">
+    <footer className="relative bg-gradient-to-b from-[#07192D] via-[#051424] to-[#020B14] border-t-4 border-[#FFC90D] text-white pt-20 pb-12 overflow-hidden">
       
 
       {/* Decorative Orbs in Footer */}

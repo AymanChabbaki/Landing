@@ -1,5 +1,42 @@
 # Cursor Log
 
+## [2026-08-02T00:21:00+01:00] Execution & Verification Log
+
+### Changes Executed
+- Modified [src/components/Testimonials.jsx](file:///c:/Users/HP%20ZBOOK/Desktop/Landing/src/components/Testimonials.jsx):
+  - Removed `tem1.mp4`.
+  - Added `/WhatsApp Video 2026-08-02 at 00.01.26.mp4` and `/WhatsApp Video 2026-08-02 at 00.03.41.mp4`.
+  - Set 1st video card initial state to `playingMap: { 0: true }` and `unmutedMap: { 0: true }` with `autoPlay={i === 0}`.
+- Updated [CHANGELOG.md](file:///c:/Users/HP%20ZBOOK/Desktop/Landing/CHANGELOG.md).
+
+### Verification
+- `Testimonials.jsx` verified updated with new video files and autoPlay + sound ON default configuration.
+
+## [2026-08-02T00:18:30+01:00] Execution & Verification Log
+
+### Changes Executed
+- Modified [src/components/Footer.jsx](file:///c:/Users/HP%20ZBOOK/Desktop/Landing/src/components/Footer.jsx):
+  - Changed background to dark navy blue gradient (`from-[#07192D] via-[#051424] to-[#020B14]`) with top yellow accent line (`border-t-4 border-[#FFC90D]`).
+- Modified [src/components/VslSection.jsx](file:///c:/Users/HP%20ZBOOK/Desktop/Landing/src/components/VslSection.jsx):
+  - Made `"d'import-export"` text smaller (`text-[0.88em]`) with `whitespace-nowrap inline-block` so it fits on a single line on mobile and desktop.
+- Updated [CHANGELOG.md](file:///c:/Users/HP%20ZBOOK/Desktop/Landing/CHANGELOG.md).
+
+### Verification
+- `Footer.jsx` and `VslSection.jsx` syntax and layout verified clean.
+
+## [2026-08-01T15:47:30+01:00] Execution & Verification Log
+
+### Changes Executed
+- Modified [src/components/Testimonials.jsx](file:///c:/Users/HP%20ZBOOK/Desktop/Landing/src/components/Testimonials.jsx):
+  - Refactored video playback to match `VslSection.jsx` in-place play/pause pattern.
+  - Added `videoRefs` and `playingMap` state.
+  - Rendered central play overlay when paused and native `controls` when playing.
+  - Removed full-screen modal container.
+- Updated [CHANGELOG.md](file:///c:/Users/HP%20ZBOOK/Desktop/Landing/CHANGELOG.md).
+
+### Verification
+- `Testimonials.jsx` verified updated with VSL video player pattern.
+
 ## [2026-08-01T15:44:20+01:00] Execution & Verification Log
 
 ### Changes Executed

@@ -2,6 +2,24 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.8.0] - 2026-08-02T00:21:00+01:00
+
+### Changed
+- Replaced `tem1.mp4` with new video uploads `/WhatsApp Video 2026-08-02 at 00.01.26.mp4` and `/WhatsApp Video 2026-08-02 at 00.03.41.mp4` in `src/components/Testimonials.jsx`.
+- Configured 1st testimonial video card to auto-play automatically (`autoPlay={i === 0}`) with sound ON by default (`playingMap: { 0: true }` and `unmutedMap: { 0: true }`).
+
+### Rationale & Architectural Decisions
+- Updates testimonial reel assets with latest client video testimonials and highlights primary testimonial video with immediate playback and audio.
+
+## [1.7.0] - 2026-08-02T00:18:30+01:00
+
+### Changed
+- Updated footer background in `src/components/Footer.jsx` to official deep dark navy gradient (`from-[#07192D] via-[#051424] to-[#020B14]`) with top yellow accent border (`border-t-4 border-[#FFC90D]`).
+- Adjusted `"d'import-export"` title font size (`text-[0.88em]`) and styling (`whitespace-nowrap inline-block`) in `src/components/VslSection.jsx` so the phrase stays cleanly on a single line across all viewports.
+
+### Rationale & Architectural Decisions
+- Matches official corporate footer design from branding reference screenshot and ensures clean, non-wrapping typography in the VSL section header.
+
 ## [1.6.2] - 2026-08-01T15:47:30+01:00
 
 ### Changed

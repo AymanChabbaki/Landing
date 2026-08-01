@@ -3,20 +3,20 @@ import useReveal from '../hooks/useReveal'
 
 const testimonials = [
   {
-    name: 'Ahmed B.',
+    name: 'Karim M.',
     role: 'Importateur Textile',
     city: 'Casablanca',
-    initials: 'AB',
+    initials: 'KM',
     color: '#0159A3',
-    video: '/tem1.mp4',
+    video: '/WhatsApp Video 2026-08-02 at 00.01.26.mp4',
   },
   {
-    name: 'Karim M.',
+    name: 'Youssef K.',
     role: 'E-Commerçant',
     city: 'Rabat',
-    initials: 'KM',
+    initials: 'YK',
     color: '#7C3AED',
-    video: '/tem2.mp4',
+    video: '/WhatsApp Video 2026-08-02 at 00.03.41.mp4',
   },
   {
     name: 'Omar L.',
@@ -24,13 +24,13 @@ const testimonials = [
     city: 'Tanger',
     initials: 'OL',
     color: '#6082B6',
-    video: '/tem3.mov',
+    video: '/tem2.mp4',
   },
 ]
 
 export default function Testimonials() {
-  const [playingMap, setPlayingMap] = useState({})
-  const [unmutedMap, setUnmutedMap] = useState({})
+  const [playingMap, setPlayingMap] = useState({ 0: true })
+  const [unmutedMap, setUnmutedMap] = useState({ 0: true })
   const videoRefs = useRef({})
 
   const r1 = useReveal()
@@ -153,6 +153,7 @@ export default function Testimonials() {
                     playsInline
                     muted={!unmutedMap[i]}
                     loop
+                    autoPlay={i === 0}
                     controls={playingMap[i]}
                     onClick={() => handlePlayClick(i)}
                   />
