@@ -16,8 +16,10 @@ export default function VslSection({ onCtaClick, onVideoPlayChange }) {
         videoRef.current.pause()
         setIsPlaying(false)
       } else {
-        videoRef.current.play()
-        setIsPlaying(true)
+        videoRef.current.muted = false
+        videoRef.current.play().then(() => {
+          setIsPlaying(true)
+        }).catch(err => console.log('VSL play error:', err))
       }
     }
   }
@@ -191,7 +193,6 @@ export default function VslSection({ onCtaClick, onVideoPlayChange }) {
                   ref={videoRef}
                   src="/vsl.mp4"
                   className="w-full aspect-video object-cover block"
-                  muted
                   loop
                   playsInline
                   controls

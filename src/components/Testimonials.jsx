@@ -64,6 +64,8 @@ export default function Testimonials() {
       video.pause()
       setPlayingMap(prev => ({ ...prev, [i]: false }))
     } else {
+      video.muted = false
+      setUnmutedMap(prev => ({ ...prev, [i]: true }))
       video.play().then(() => {
         setPlayingMap(prev => ({ ...prev, [i]: true }))
       }).catch(err => console.log('Video play error:', err))
