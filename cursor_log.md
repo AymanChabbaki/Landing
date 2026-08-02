@@ -1,5 +1,17 @@
 # Cursor Log
 
+## [2026-08-02T00:29:00+01:00] Execution & Verification Log
+
+### Changes Executed
+- Modified [src/components/VslSection.jsx](file:///c:/Users/HP%20ZBOOK/Desktop/Landing/src/components/VslSection.jsx):
+  - Configured video play handler to explicitly set `videoRef.current.muted = false`.
+- Modified [src/components/Testimonials.jsx](file:///c:/Users/HP%20ZBOOK/Desktop/Landing/src/components/Testimonials.jsx):
+  - Updated `handlePlayClick(i)` to set `video.muted = false` and `unmutedMap[i] = true`.
+- Updated [CHANGELOG.md](file:///c:/Users/HP%20ZBOOK/Desktop/Landing/CHANGELOG.md).
+
+### Verification
+- Sound-ON default playback verified in `VslSection.jsx` and `Testimonials.jsx`.
+
 ## [2026-08-02T00:25:00+01:00] Execution & Verification Log
 
 ### Changes Executed
