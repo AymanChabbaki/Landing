@@ -172,17 +172,7 @@ export default function VslSection({ onCtaClick, onVideoPlayChange }) {
               </div>
 
               {/* Video Inner Wrapper */}
-              <div 
-                className="relative rounded-2xl overflow-hidden bg-slate-950 shadow-inner ring-1 ring-white/20 group z-10"
-                onMouseEnter={() => {
-                  if (videoRef.current && videoRef.current.paused) {
-                    videoRef.current.play().then(() => {
-                      setIsPlaying(true)
-                      onVideoPlayChange?.(true)
-                    }).catch(err => console.log('VSL play error:', err))
-                  }
-                }}
-              >
+              <div className="relative rounded-2xl overflow-hidden bg-slate-950 shadow-inner ring-1 ring-white/20 group z-10">
                 {/* Play Button Visual Overlay (Visible & Clickable ONLY when paused) */}
                 <div 
                   onClick={handlePlayClick}

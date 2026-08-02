@@ -1,5 +1,16 @@
 # Cursor Log
 
+## [2026-08-02T00:23:45+01:00] Execution & Verification Log
+
+### Changes Executed
+- Modified [src/components/VslSection.jsx](file:///c:/Users/HP%20ZBOOK/Desktop/Landing/src/components/VslSection.jsx):
+  - Added `onMouseEnter` hover play trigger to video container.
+  - Ensured initial state is strictly paused on page load until hover or click interaction.
+- Updated [CHANGELOG.md](file:///c:/Users/HP%20ZBOOK/Desktop/Landing/CHANGELOG.md).
+
+### Verification
+- Hover & click play behavior verified in `VslSection.jsx`.
+
 ## [2026-08-02T00:21:50+01:00] Execution & Verification Log
 
 ### Changes Executed

@@ -45,8 +45,8 @@ const testimonials = [
 ]
 
 export default function Testimonials() {
-  const [playingMap, setPlayingMap] = useState({ 0: true })
-  const [unmutedMap, setUnmutedMap] = useState({ 0: true })
+  const [playingMap, setPlayingMap] = useState({})
+  const [unmutedMap, setUnmutedMap] = useState({})
   const videoRefs = useRef({})
 
   const r1 = useReveal()
@@ -126,19 +126,17 @@ export default function Testimonials() {
                 {/* Audio Mute/Unmute Toggle Button */}
                 {t.video && (
                   <button
-                    type="button"
                     onClick={(e) => toggleSound(i, e)}
-                    className="absolute top-3 right-3 z-30 w-9 h-9 rounded-full bg-black/60 backdrop-blur-md border border-white/20 text-white flex items-center justify-center shadow-lg hover:scale-110 active:scale-95 transition-all duration-200"
-                    aria-label={unmutedMap[i] ? 'Désactiver le son' : 'Activer le son'}
-                    title={unmutedMap[i] ? 'Désactiver le son' : 'Activer le son'}
+                    className="absolute top-3 right-3 z-20 w-9 h-9 rounded-full bg-slate-900/80 backdrop-blur-md border border-white/20 flex items-center justify-center text-white shadow-lg hover:bg-slate-900 transition-all duration-200"
+                    title={unmutedMap[i] ? "Couper le son" : "Activer le son"}
                   >
                     {unmutedMap[i] ? (
-                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="w-4 h-4 text-emerald-400">
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="w-4 h-4 text-emerald-400">
                         <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5" />
                         <path d="M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07" />
                       </svg>
                     ) : (
-                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="w-4 h-4 text-white/80">
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="w-4 h-4 text-slate-300">
                         <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5" />
                         <line x1="23" y1="9" x2="17" y2="15" />
                         <line x1="17" y1="9" x2="23" y2="15" />
@@ -147,21 +145,19 @@ export default function Testimonials() {
                   </button>
                 )}
 
-                {/* Play Button Visual Overlay (VSL style) */}
-                {t.video && (
-                  <div
-                    onClick={() => handlePlayClick(i)}
-                    className={`absolute inset-0 z-20 flex items-center justify-center transition-all duration-300 cursor-pointer ${
-                      playingMap[i] ? 'opacity-0 scale-110 pointer-events-none' : 'opacity-100 scale-100 bg-black/30 backdrop-blur-[2px] pointer-events-auto'
-                    }`}
-                  >
-                    <div className="w-16 h-16 rounded-full bg-white flex items-center justify-center shadow-2xl transition-transform duration-300 group-hover:scale-110">
-                      <svg viewBox="0 0 24 24" fill="currentColor" className="w-7 h-7 text-slate-900 ml-1">
-                        <path d="M8 5v14l11-7z" />
-                      </svg>
-                    </div>
+                {/* Play Button Visual Overlay (Visible & Clickable ONLY when paused) */}
+                <div 
+                  onClick={() => handlePlayClick(i)}
+                  className={`absolute inset-0 z-10 flex items-center justify-center transition-all duration-300 cursor-pointer ${
+                    playingMap[i] ? 'opacity-0 scale-110 pointer-events-none' : 'opacity-100 scale-100 bg-black/30 backdrop-blur-[2px] pointer-events-auto'
+                  }`}
+                >
+                  <div className="w-14 h-14 bg-white/95 backdrop-blur-md rounded-full flex items-center justify-center shadow-xl">
+                    <svg viewBox="0 0 24 24" fill="currentColor" className="w-6 h-6 text-[#0159A3] ml-0.5">
+                      <path d="M8 5v14l11-7z" />
+                    </svg>
                   </div>
-                )}
+                </div>
 
                 {t.video ? (
                   <video
@@ -171,7 +167,6 @@ export default function Testimonials() {
                     playsInline
                     muted={!unmutedMap[i]}
                     loop
-                    autoPlay={i === 0}
                     controls={playingMap[i]}
                     onClick={() => handlePlayClick(i)}
                   />
