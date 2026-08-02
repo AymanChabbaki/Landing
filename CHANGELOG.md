@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file.
 
+## [2.0.1] - 2026-08-02T00:23:45+01:00
+
+### Changed
+- Configured VSL video in `src/components/VslSection.jsx` to remain strictly paused on initial load, triggering playback on hover (`onMouseEnter`) or click (`onClick`).
+
+### Rationale & Architectural Decisions
+- Prevents unprompted autoplay on page load and allows visitors to initiate video playback naturally by hovering or clicking.
+
 ## [2.0.0] - 2026-08-02T00:21:50+01:00
 
 ### Changed
