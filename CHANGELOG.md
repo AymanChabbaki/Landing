@@ -2,6 +2,17 @@
 
 All notable changes to this project will be documented in this file.
 
+## [2.1.0] - 2026-08-02T00:25:00+01:00
+
+### Fixed
+- Moved `<noscript>` Meta Pixel tag inside `<body>` in `index.html` to resolve Vite HTML parser compile error (`parse5 disallowed-content-in-noscript-in-head`).
+
+### Changed
+- Removed all video autoplay triggers (`onMouseEnter` hover auto-trigger in `src/components/VslSection.jsx`, `autoPlay={i === 0}` in `src/components/Testimonials.jsx`, and `autoPlay` in `src/components/Hero.jsx`).
+
+### Rationale & Architectural Decisions
+- Fixes HTML build parser errors and guarantees zero unprompted video playback on page load. All videos now require explicit click interaction.
+
 ## [2.0.1] - 2026-08-02T00:23:45+01:00
 
 ### Changed
