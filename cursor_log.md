@@ -1,5 +1,37 @@
 # Cursor Log
 
+## [2026-08-02T00:21:50+01:00] Execution & Verification Log
+
+### Changes Executed
+- Modified [src/components/VslSection.jsx](file:///c:/Users/HP%20ZBOOK/Desktop/Landing/src/components/VslSection.jsx):
+  - Updated video source to `/vsl.mp4`.
+- Updated [CHANGELOG.md](file:///c:/Users/HP%20ZBOOK/Desktop/Landing/CHANGELOG.md).
+
+### Verification
+- VSL video source verified updated to `/vsl.mp4`.
+
+## [2026-08-02T00:19:35+01:00] Execution & Verification Log
+
+### Changes Executed
+- Verified [src/components/Testimonials.jsx](file:///c:/Users/HP%20ZBOOK/Desktop/Landing/src/components/Testimonials.jsx):
+  - Confirmed all 5 testimonial cards use male client names (`Ahmed B.`, `Rachid T.`, `Karim M.`, `Youssef K.`, `Omar L.`).
+- Updated [CHANGELOG.md](file:///c:/Users/HP%20ZBOOK/Desktop/Landing/CHANGELOG.md).
+
+### Verification
+- All 5 testimonial entries verified with male names matching video reels.
+
+## [2026-08-02T01:18:30+01:00] Execution & Verification Log
+
+### Changes Executed
+- Modified [src/components/Testimonials.jsx](file:///c:/Users/HP%20ZBOOK/Desktop/Landing/src/components/Testimonials.jsx):
+  - Retained all 5 testimonial video cards (`tem2.mp4`, `/WhatsApp Video 2026-08-02 at 01.09.49.mp4`, `WhatsApp Video 1`, `WhatsApp Video 2`, `tem3.mov`).
+  - Positioned the new video (`WhatsApp Video 2026-08-02 at 01.09.49.mp4`) as Card 2.
+  - Updated grid classes to `lg:grid-cols-5`.
+- Updated [CHANGELOG.md](file:///c:/Users/HP%20ZBOOK/Desktop/Landing/CHANGELOG.md).
+
+### Verification
+- 5-card testimonial grid layout verified in `Testimonials.jsx`.
+
 ## [2026-08-02T00:26:00+01:00] Execution & Verification Log
 
 ### Changes Executed

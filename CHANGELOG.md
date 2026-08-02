@@ -2,6 +2,30 @@
 
 All notable changes to this project will be documented in this file.
 
+## [2.0.0] - 2026-08-02T00:21:50+01:00
+
+### Changed
+- Updated VSL video player source in `src/components/VslSection.jsx` to `/vsl.mp4`.
+
+### Rationale & Architectural Decisions
+- Connects the official production VSL video presentation (`/vsl.mp4`) into the primary VSL section hero player.
+
+## [1.9.2] - 2026-08-02T00:19:35+01:00
+
+### Fixed
+- Confirmed all 5 testimonial entries in `src/components/Testimonials.jsx` use male Moroccan client names (`Ahmed B.`, `Rachid T.`, `Karim M.`, `Youssef K.`, `Omar L.`) matching all client video testimonials.
+
+### Rationale & Architectural Decisions
+- Ensures 100% accurate name matching across all 5 male video testimonials.
+
+## [1.9.1] - 2026-08-02T01:18:30+01:00
+
+### Added
+- Expanded `src/components/Testimonials.jsx` to feature all 5 testimonial video cards (`tem2.mp4`, `/WhatsApp Video 2026-08-02 at 01.09.49.mp4`, `WhatsApp Video 1`, `WhatsApp Video 2`, `tem3.mov`), placing the new video in 2nd position.
+
+### Rationale & Architectural Decisions
+- Displays all client video testimonials in a 5-column responsive grid while featuring the newest video upload in 2nd position.
+
 ## [1.9.0] - 2026-08-02T00:26:00+01:00
 
 ### Changed

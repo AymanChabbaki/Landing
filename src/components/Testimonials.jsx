@@ -11,6 +11,14 @@ const testimonials = [
     video: '/tem2.mp4',
   },
   {
+    name: 'Rachid T.',
+    role: 'Importateur Matériel',
+    city: 'Casablanca',
+    initials: 'RT',
+    color: '#0159A3',
+    video: '/WhatsApp Video 2026-08-02 at 01.09.49.mp4',
+  },
+  {
     name: 'Karim M.',
     role: 'Importateur Textile',
     city: 'Casablanca',
@@ -46,7 +54,8 @@ export default function Testimonials() {
   const r3 = useReveal(200)
   const r4 = useReveal(300)
   const r5 = useReveal(400)
-  const refs = [r2, r3, r4, r5]
+  const r6 = useReveal(500)
+  const refs = [r2, r3, r4, r5, r6]
 
   const handlePlayClick = (i) => {
     const video = videoRefs.current[i]
@@ -101,8 +110,8 @@ export default function Testimonials() {
 
         </div>
 
-        {/* ─── 4 Reel-sized video cards ─── */}
-        <div className="flex overflow-x-auto sm:grid sm:grid-cols-2 lg:grid-cols-4 gap-5 sm:gap-6 pb-6 sm:pb-0 snap-x snap-mandatory [-ms-overflow-style:'none'] [scrollbar-width:'none'] [&::-webkit-scrollbar]:hidden">
+        {/* ─── 5 Reel-sized video cards ─── */}
+        <div className="flex overflow-x-auto sm:grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-5 sm:gap-6 pb-6 sm:pb-0 snap-x snap-mandatory [-ms-overflow-style:'none'] [scrollbar-width:'none'] [&::-webkit-scrollbar]:hidden">
           {testimonials.map((t, i) => (
             <div
               key={i}

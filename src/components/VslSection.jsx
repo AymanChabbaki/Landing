@@ -189,7 +189,7 @@ export default function VslSection({ onCtaClick, onVideoPlayChange }) {
 
                 <video
                   ref={videoRef}
-                  src="/WhatsApp Video 2026-07-28 at 18.58.42.mp4"
+                  src="/vsl.mp4"
                   className="w-full aspect-video object-cover block"
                   muted
                   loop
