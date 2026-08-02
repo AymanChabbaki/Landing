@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file.
 
+## [2.1.1] - 2026-08-02T00:29:00+01:00
+
+### Changed
+- Configured VSL video in `src/components/VslSection.jsx` and testimonial videos in `src/components/Testimonials.jsx` to play with **sound ON automatically** when tapped/clicked (`video.muted = false`).
+
+### Rationale & Architectural Decisions
+- Ensures that when visitors click play on any video, audio plays immediately without requiring a secondary manual unmute action.
+
 ## [2.1.0] - 2026-08-02T00:25:00+01:00
 
 ### Fixed
