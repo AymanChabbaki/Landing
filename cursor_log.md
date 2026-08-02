@@ -1,5 +1,17 @@
 # Cursor Log
 
+## [2026-08-02T00:25:00+01:00] Execution & Verification Log
+
+### Changes Executed
+- Modified [index.html](file:///c:/Users/HP%20ZBOOK/Desktop/Landing/index.html): Moved `<noscript>` Meta Pixel tag inside `<body>` to fix Vite compile parse error.
+- Modified [src/components/VslSection.jsx](file:///c:/Users/HP%20ZBOOK/Desktop/Landing/src/components/VslSection.jsx): Removed `onMouseEnter` hover auto-trigger.
+- Modified [src/components/Testimonials.jsx](file:///c:/Users/HP%20ZBOOK/Desktop/Landing/src/components/Testimonials.jsx): Removed `autoPlay={i === 0}` and set initial playing state to paused.
+- Modified [src/components/Hero.jsx](file:///c:/Users/HP%20ZBOOK/Desktop/Landing/src/components/Hero.jsx): Removed `autoPlay` from background hero videos.
+- Updated [CHANGELOG.md](file:///c:/Users/HP%20ZBOOK/Desktop/Landing/CHANGELOG.md).
+
+### Verification
+- Vite build compiler issues resolved and 100% manual click-only video play behavior verified.
+
 ## [2026-08-02T00:23:45+01:00] Execution & Verification Log
 
 ### Changes Executed
