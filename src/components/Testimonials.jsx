@@ -4,7 +4,7 @@ import useReveal from '../hooks/useReveal'
 const testimonials = [
   {
     name: 'Ahmed B.',
-    role: 'Sourcing Manager',
+    role: 'Co Fondateur',
     city: 'Casablanca',
     initials: 'AB',
     color: '#059669',
