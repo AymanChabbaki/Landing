@@ -11,7 +11,6 @@ export default function Hero() {
       <video
         src="/hero_vid.mp4"
         className="absolute inset-0 w-full h-full object-cover opacity-90 z-0 hidden md:block"
-        autoPlay
         loop
         muted
         playsInline
@@ -20,7 +19,6 @@ export default function Hero() {
       <video
         src="/hero_vid_phone.mp4"
         className="absolute inset-0 w-full h-full object-cover opacity-90 z-0 md:hidden"
-        autoPlay
         loop
         muted
         playsInline

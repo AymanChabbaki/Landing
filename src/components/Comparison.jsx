@@ -60,13 +60,13 @@ export default function Comparison() {
       <div className="max-w-[1100px] mx-auto px-6 sm:px-12">
 
         {/* ─── Top: Eyebrow + Giant Stat ─── */}
-        <div ref={r1} className="reveal-el mb-20">
+        <div ref={r1} className="reveal-el mb-8 sm:mb-14">
           <span className="text-xs font-bold tracking-[0.3em] text-[#0159A3] uppercase mb-5 block">
             Le Constat
           </span>
           <div className="flex flex-col sm:flex-row sm:items-end gap-4 sm:gap-8">
             {/* Big number */}
-            <div className="font-heading font-black leading-none tracking-tighter text-slate-900"
+            <div className="font-heading font-black leading-none tracking-tighter text-[#002B49]"
               style={{ fontSize: 'clamp(6rem, 16vw, 12rem)' }}>
               <AnimatedCounter target={80} />
               <span className="text-green-500">%</span>
@@ -90,18 +90,18 @@ export default function Comparison() {
         <div ref={r2} className="reveal-el grid grid-cols-1 lg:grid-cols-[1fr_64px_1fr] items-start gap-0">
 
 
-          {/* RIGHT: Avec Ultex PortNet */}
-          <div>
-            <div className="flex items-center gap-3 mb-8 pb-4 border-b border-slate-100 mt-10 lg:mt-0">
+          {/* RIGHT: Avec accompagnement Ultex */}
+          <div className="mb-6 sm:mb-12 lg:mb-0">
+            <div className="flex items-center gap-3 mb-3 pb-2 sm:mb-8 sm:pb-4 border-b border-slate-100 mt-0">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="w-5 h-5 text-emerald-500 shrink-0">
                 <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" /><polyline points="22 4 12 14.01 9 11.01" />
               </svg>
-              <h3 className="font-heading font-bold text-lg text-slate-800">Avec Ultex</h3>
+              <h3 className="font-heading font-bold text-lg text-slate-800">Avec accompagnement Ultex</h3>
             </div>
             <ul className="flex flex-col gap-0">
               {successItems.map((item, i) => (
                 <li key={i}
-                  className="flex items-center gap-4 py-5 text-slate-600 text-sm sm:text-base leading-snug border-b border-slate-100 last:border-0 group hover:text-slate-900 transition-colors duration-150"
+                  className="flex items-center gap-4 py-2 sm:py-4 text-slate-600 text-sm sm:text-base leading-snug border-b border-slate-100 last:border-0 group hover:text-slate-900 transition-colors duration-150"
                 >
                   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" className="w-4 h-4 text-emerald-500 shrink-0 group-hover:text-emerald-600 transition-colors">
                     <polyline points="20 6 9 17 4 12" />
@@ -117,18 +117,18 @@ export default function Comparison() {
             <span className="my-4 text-xs font-black tracking-[0.25em] text-slate-300 uppercase rotate-0">VS</span>
             <div className="flex-1 w-px bg-slate-100" style={{ minHeight: '40px' }} />
           </div>
-                    {/* LEFT: Sans Pré-Validation */}
+          {/* LEFT: Sans Pré-Validation */}
           <div>
-            <div className="flex items-center gap-3 mb-8 pb-4 border-b border-slate-100">
+            <div className="flex items-center gap-3 mb-3 pb-2 sm:mb-8 sm:pb-4 border-b border-slate-100">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="w-5 h-5 text-rose-400 shrink-0">
                 <circle cx="12" cy="12" r="10" /><line x1="15" y1="9" x2="9" y2="15" /><line x1="9" y1="9" x2="15" y2="15" />
               </svg>
-              <h3 className="font-heading font-bold text-lg text-slate-800">Sans Pré-Validation</h3>
+              <h3 className="font-heading font-bold text-base sm:text-lg text-slate-800 whitespace-nowrap">Sans Pré-Validation</h3>
             </div>
             <ul className="flex flex-col gap-0">
               {dangerItems.map((item, i) => (
                 <li key={i}
-                  className="flex items-center gap-4 py-5 text-slate-600 text-sm sm:text-base leading-snug border-b border-slate-100 last:border-0 group hover:text-slate-900 transition-colors duration-150"
+                  className="flex items-center gap-4 py-2 sm:py-3 text-slate-600 text-sm sm:text-base leading-snug border-b border-slate-100 last:border-0 group hover:text-slate-900 transition-colors duration-150"
                 >
                   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" className="w-4 h-4 text-rose-400 shrink-0 group-hover:text-rose-500 transition-colors">
                     <line x1="18" y1="6" x2="6" y2="18" /><line x1="6" y1="6" x2="18" y2="18" />

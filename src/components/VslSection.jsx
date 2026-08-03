@@ -16,8 +16,10 @@ export default function VslSection({ onCtaClick, onVideoPlayChange }) {
         videoRef.current.pause()
         setIsPlaying(false)
       } else {
-        videoRef.current.play()
-        setIsPlaying(true)
+        videoRef.current.muted = false
+        videoRef.current.play().then(() => {
+          setIsPlaying(true)
+        }).catch(err => console.log('VSL play error:', err))
       }
     }
   }
@@ -42,9 +44,9 @@ export default function VslSection({ onCtaClick, onVideoPlayChange }) {
         
         {/* ─── MOBILE ONLY TITLE (Appears above video) ─── */}
         <div className="flex lg:hidden flex-col gap-3 mb-8 animate-fade-up opacity-0" style={{ animationDelay: '0.2s', animationFillMode: 'forwards' }}>
-          <h2 className="font-heading font-black text-[clamp(3rem,12vw,3rem)] leading-[1.1] tracking-tight text-slate-900 text-center">
-            Rentabiliser vos opérations  <br />
-           <span className="text-[#0159A3]">d'import-export</span>
+          <h2 className="font-heading font-black text-[clamp(1.85rem,7vw,2.75rem)] leading-[1.12] tracking-tight text-[#002B49] text-center">
+            Rentabiliser vos opérations <br />
+            <span className="text-[#0159A3] whitespace-nowrap inline-block text-[0.88em]">d'import-export</span>
           </h2>
         </div>
 
@@ -55,9 +57,9 @@ export default function VslSection({ onCtaClick, onVideoPlayChange }) {
 
             {/* DESKTOP ONLY TITLE (Hidden on mobile) */}
             <div className="hidden lg:flex flex-col gap-7">
-              <h2 className="font-heading font-black text-[clamp(2.6rem,4.5vw,4rem)] leading-[1.06] tracking-tight text-slate-900">
-               Rentabiliser vos opérations  <br />
-               <span className="text-[#0159A3]">d'import-export</span>
+              <h2 className="font-heading font-black text-[clamp(2.4rem,4vw,3.6rem)] leading-[1.08] tracking-tight text-[#002B49]">
+                Rentabiliser vos opérations <br />
+                <span className="text-[#0159A3] whitespace-nowrap inline-block text-[0.88em]">d'import-export</span>
               </h2>
               <span className="text-sm font-bold tracking-[0.2em] text-orange-500 uppercase">
                 Pourquoi regarder cette vidéo ?
@@ -189,9 +191,8 @@ export default function VslSection({ onCtaClick, onVideoPlayChange }) {
 
                 <video
                   ref={videoRef}
-                  src="/WhatsApp Video 2026-07-28 at 18.58.42.mp4"
+                  src="/vsl.mp4"
                   className="w-full aspect-video object-cover block"
-                  muted
                   loop
                   playsInline
                   controls
