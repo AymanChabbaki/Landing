@@ -80,7 +80,7 @@ export default function Footer() {
                 </span>
                 <div className="flex flex-col gap-1.5 md:pl-6 text-sm text-slate-200/80">
                   <a href="tel:+212522862135" className="hover:text-white transition-colors">(+212) 522-862135</a>
-                  <a href="tel:+212674755993" className="hover:text-white transition-colors">(+212) 674-755993</a>
+                
                 </div>
               </div>
 
