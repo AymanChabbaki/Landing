@@ -40,7 +40,7 @@ export default function VslSection({ onCtaClick, onVideoPlayChange }) {
     <section id="vsl-section" className="relative bg-white overflow-hidden">
 
       {/* ─── MAIN SPLIT LAYOUT ─── */}
-      <div className="relative z-10 max-w-[1360px] mx-auto px-6 sm:px-12 pt-16 pb-16 sm:pt-28 sm:pb-24">
+      <div className="relative z-10 max-w-[1520px] mx-auto px-6 sm:px-12 pt-16 pb-16 sm:pt-28 sm:pb-24">
         
         {/* ─── MOBILE ONLY TITLE (Appears above video) ─── */}
         <div className="flex lg:hidden flex-col gap-3 mb-8 animate-fade-up opacity-0" style={{ animationDelay: '0.2s', animationFillMode: 'forwards' }}>
@@ -50,7 +50,7 @@ export default function VslSection({ onCtaClick, onVideoPlayChange }) {
           </h2>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-[1fr_1.3fr] gap-12 lg:gap-16 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-[0.85fr_1.6fr] gap-12 lg:gap-16 items-center">
 
           {/* ─── LEFT: Text column ─── */}
           <div ref={r1} className="reveal-el flex flex-col gap-7 relative z-10 order-last lg:order-first">
@@ -157,50 +157,33 @@ export default function VslSection({ onCtaClick, onVideoPlayChange }) {
               <span className="text-xs font-mono font-bold text-slate-400 tracking-wider">01:55 MIN</span>
             </div>
 
-            {/* ─── Premium Import/Export Video Card ─── */}
-            <div className="relative rounded-[2rem] overflow-hidden bg-gradient-to-br from-[#0159A3] to-[#003865] p-3 sm:p-5 border-[3px] border-[#FFC90D] shadow-[0_20px_60px_rgba(255,201,13,0.15)] transition-shadow duration-500 hover:shadow-[0_30px_80px_rgba(255,201,13,0.25)]">
-              
-              {/* Subtle background textures for import/export feel */}
-              <img src="/boat.png" alt="" className="absolute -bottom-10 -right-10 w-72 h-auto opacity-10 pointer-events-none mix-blend-overlay" aria-hidden="true" />
-              <img src="/avion.png" alt="" className="absolute top-10 -left-10 w-56 h-auto opacity-10 pointer-events-none mix-blend-overlay" aria-hidden="true" />
-
-              {/* Card Header with Logo */}
-              <div className="relative z-10 flex items-center justify-between px-2 pb-4 pt-1">
-                <img src="/logo.svg" alt="Ultex PortNet" className="h-5 sm:h-6 brightness-0 invert opacity-90" />
-                <div className="flex items-center gap-2">
-                  <span className="w-2 h-2 rounded-full bg-[#FFC90D] animate-pulse" />
-                  <span className="text-[10px] sm:text-xs font-bold tracking-widest text-white/90 uppercase">Système Sécurisé</span>
+            {/* ─── Video, framed with a neon blue border only ─── */}
+            <div className="relative -mx-6 sm:mx-0 rounded-none sm:rounded-2xl overflow-hidden bg-slate-950 border-2 border-[#00D9FF] shadow-[0_0_20px_rgba(0,217,255,0.55),0_0_50px_rgba(0,217,255,0.3)] group z-10">
+              {/* Play Button Visual Overlay (Visible & Clickable ONLY when paused) */}
+              <div
+                onClick={handlePlayClick}
+                className={`absolute inset-0 z-10 flex items-center justify-center transition-all duration-300 cursor-pointer ${
+                  isPlaying ? 'opacity-0 scale-110 pointer-events-none' : 'opacity-100 scale-100 bg-black/30 backdrop-blur-[2px] pointer-events-auto'
+                }`}
+              >
+                <div className="w-20 h-20 bg-white/95 backdrop-blur-md rounded-full flex items-center justify-center shadow-2xl">
+                  <svg viewBox="0 0 24 24" fill="currentColor" className="w-8 h-8 text-[#0159A3] ml-1">
+                    <path d="M8 5v14l11-7z" />
+                  </svg>
                 </div>
               </div>
 
-              {/* Video Inner Wrapper */}
-              <div className="relative rounded-2xl overflow-hidden bg-slate-950 shadow-inner ring-1 ring-white/20 group z-10">
-                {/* Play Button Visual Overlay (Visible & Clickable ONLY when paused) */}
-                <div 
-                  onClick={handlePlayClick}
-                  className={`absolute inset-0 z-10 flex items-center justify-center transition-all duration-300 cursor-pointer ${
-                    isPlaying ? 'opacity-0 scale-110 pointer-events-none' : 'opacity-100 scale-100 bg-black/30 backdrop-blur-[2px] pointer-events-auto'
-                  }`}
-                >
-                  <div className="w-20 h-20 bg-white/95 backdrop-blur-md rounded-full flex items-center justify-center shadow-2xl">
-                    <svg viewBox="0 0 24 24" fill="currentColor" className="w-8 h-8 text-[#0159A3] ml-1">
-                      <path d="M8 5v14l11-7z" />
-                    </svg>
-                  </div>
-                </div>
-
-                <video
-                  ref={videoRef}
-                  src="/vsln.mp4"
-                  className="w-full aspect-video object-cover block"
-                  loop
-                  playsInline
-                  controls
-                  onEnded={() => { setIsPlaying(false); onVideoPlayChange?.(false); }}
-                  onPause={() => { setIsPlaying(false); onVideoPlayChange?.(false); }}
-                  onPlay={() => { setIsPlaying(true); onVideoPlayChange?.(true); }}
-                />
-              </div>
+              <video
+                ref={videoRef}
+                src="/vsln.mp4"
+                className="w-full aspect-video object-cover block"
+                loop
+                playsInline
+                controls
+                onEnded={() => { setIsPlaying(false); onVideoPlayChange?.(false); }}
+                onPause={() => { setIsPlaying(false); onVideoPlayChange?.(false); }}
+                onPlay={() => { setIsPlaying(true); onVideoPlayChange?.(true); }}
+              />
             </div>
             {/* Bottom trust row */}
             <div ref={r3} className="reveal-el flex items-center justify-end pt-2">
