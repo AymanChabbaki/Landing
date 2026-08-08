@@ -43,8 +43,8 @@ export default function VslSection({ onCtaClick, onVideoPlayChange }) {
       <div className="relative z-10 max-w-[1520px] mx-auto px-6 sm:px-12 pt-16 pb-16 sm:pt-28 sm:pb-24">        {/* ─── MOBILE ONLY TITLE (Appears above video) ─── */}
         <div className="flex lg:hidden flex-col gap-3 mb-8 animate-fade-up opacity-0" style={{ animationDelay: '0.2s', animationFillMode: 'forwards' }}>
           <h2 className="font-heading font-bold text-[clamp(1.85rem,7vw,2.75rem)] leading-[1.18] tracking-tight text-[#002B49] text-center">
-            زِد ربحية عملياتك في <br />
-            <span className="text-[#0159A3] whitespace-nowrap inline-block text-[0.9em]">الاستيراد والتصدير</span>
+            ضاعف أرباحك <span className="text-[#0159A3]">في</span><br />
+            الاستيراد والتصدير بالمغرب
           </h2>
         </div>
 
@@ -56,8 +56,8 @@ export default function VslSection({ onCtaClick, onVideoPlayChange }) {
             {/* DESKTOP ONLY TITLE (Hidden on mobile) */}
             <div className="hidden lg:flex flex-col gap-7">
               <h2 className="font-heading font-bold text-[clamp(2.3rem,3.8vw,3.4rem)] leading-[1.15] tracking-tight text-[#002B49]">
-                زِد ربحية عملياتك في <br />
-                <span className="text-[#0159A3] whitespace-nowrap inline-block text-[0.9em]">الاستيراد والتصدير بالمغرب</span>
+                ضاعف أرباحك <span className="text-[#0159A3]">في</span><br />
+                الاستيراد والتصدير بالمغرب
               </h2>
               <span className="text-sm font-bold tracking-widest text-orange-500 uppercase">
                 لماذا يجب عليك مشاهدة هذا الفيديو؟
@@ -71,12 +71,12 @@ export default function VslSection({ onCtaClick, onVideoPlayChange }) {
 
             {/* Sub-headline */}
             <p className="text-base sm:text-lg text-slate-700 leading-relaxed font-semibold max-w-[520px]">
-              أحْمِ <strong className="text-slate-900">100% من عمليات الاستيراد الخاصة بك</strong> قبل حتى أن تبحر شحنتك من الميناء.
+              تجنب <strong className="text-slate-900">معظم أخطاء عمليات الاستيراد الخاصة بك</strong> قبل الشحن من المصدر.
             </p>
 
             {/* Body */}
             <p className="text-sm sm:text-base text-slate-600 leading-relaxed max-w-[500px]">
-              لا تدع المفاجآت تؤثر على أرباحك. شاهد هذا الفيديو القصير لاكتشاف كيف يقضي <strong className="text-slate-800">نظام التحقق المسبق أولتكس</strong> نهائياً على احتجاز البضائع في الموانئ ورسوم الغرامات والتخزين.
+              لا تدع المفاجآت تؤثر على أرباحك. شاهد هذا الفيديو القصير لاكتشاف كيف يقضي <strong className="text-slate-800">نظام التحقق المسبق ultex</strong> نهائياً على احتجاز البضائع في الموانئ ورسوم الغرامات والتخزين.
             </p>
 
             {/* Proof bullets */}
@@ -153,7 +153,7 @@ export default function VslSection({ onCtaClick, onVideoPlayChange }) {
             </div>
 
             {/* ─── Video, framed with a neon blue border only ─── */}
-            <div className="relative -mx-6 sm:mx-0 rounded-none sm:rounded-2xl overflow-hidden bg-slate-950 border-2 border-[#00D9FF] shadow-[0_0_20px_rgba(0,217,255,0.55),0_0_50px_rgba(0,217,255,0.3)] group z-10">
+            <div className="relative -mx-3 sm:mx-0 rounded-xl sm:rounded-2xl overflow-hidden bg-slate-950 border-2 border-[#00D9FF] shadow-[0_0_20px_rgba(0,217,255,0.55),0_0_50px_rgba(0,217,255,0.3)] group z-10">
               {/* Play Button Visual Overlay (Visible & Clickable ONLY when paused) */}
               <div
                 onClick={handlePlayClick}

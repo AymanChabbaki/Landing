@@ -50,7 +50,7 @@ export default function TradeTransitOverlay({ active, onComplete }) {
             <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-emerald-500"></span>
           </span>
           <span className="text-xs font-mono font-bold tracking-widest text-slate-200 uppercase">
-            أولتكس بورتنيت // مركز المتابعة الجمركية - الدار البيضاء
+            ultex بورتنيت // مركز المتابعة الجمركية - الدار البيضاء
           </span>
         </div>
 
@@ -91,7 +91,7 @@ export default function TradeTransitOverlay({ active, onComplete }) {
               <div className="absolute -inset-3 rounded-full bg-brand-blue/40 blur-xl animate-pulse" />
               <img
                 src="/avion.png"
-                alt="الشحن الجوي أولتكس"
+                alt="الشحن الجوي ultex"
                 className="h-24 sm:h-32 w-auto object-contain filter drop-shadow-[0_20px_40px_rgba(1,89,163,0.9)] transform rotate-6 scale-x-[-1]"
               />
             </div>
@@ -107,7 +107,7 @@ export default function TradeTransitOverlay({ active, onComplete }) {
               <div className="absolute -inset-3 rounded-full bg-brand-gold/30 blur-xl animate-pulse" />
               <img
                 src="/boat.png"
-                alt="الشحن البحري أولتكس"
+                alt="الشحن البحري ultex"
                 className="h-24 sm:h-32 w-auto object-contain filter drop-shadow-[0_20px_40px_rgba(0,0,0,0.95)] scale-x-[-1]"
               />
             </div>

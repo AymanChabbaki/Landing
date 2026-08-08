@@ -158,7 +158,7 @@ export default function VslSection({ onCtaClick, onVideoPlayChange }) {
             </div>
 
             {/* ─── Video, framed with a neon blue border only ─── */}
-            <div className="relative -mx-6 sm:mx-0 rounded-none sm:rounded-2xl overflow-hidden bg-slate-950 border-2 border-[#00D9FF] shadow-[0_0_20px_rgba(0,217,255,0.55),0_0_50px_rgba(0,217,255,0.3)] group z-10">
+            <div className="relative -mx-3 sm:mx-0 rounded-xl sm:rounded-2xl overflow-hidden bg-slate-950 border-2 border-[#00D9FF] shadow-[0_0_20px_rgba(0,217,255,0.55),0_0_50px_rgba(0,217,255,0.3)] group z-10">
               {/* Play Button Visual Overlay (Visible & Clickable ONLY when paused) */}
               <div
                 onClick={handlePlayClick}

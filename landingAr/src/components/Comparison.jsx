@@ -87,13 +87,13 @@ export default function Comparison() {
         {/* ─── Comparison: two columns ─── */}
         <div ref={r2} className="reveal-el grid grid-cols-1 lg:grid-cols-[1fr_64px_1fr] items-start gap-0">
 
-          {/* RIGHT (First in RTL): مع نظام أولتكس */}
+          {/* RIGHT (First in RTL): مع نظام ultex */}
           <div className="mb-6 sm:mb-12 lg:mb-0">
             <div className="flex items-center gap-3 mb-3 pb-2 sm:mb-8 sm:pb-4 border-b border-slate-100 mt-0">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="w-5 h-5 text-emerald-500 shrink-0">
                 <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" /><polyline points="22 4 12 14.01 9 11.01" />
               </svg>
-              <h3 className="font-heading font-bold text-lg text-slate-800">مع نظام أولتكس بورتنيت</h3>
+              <h3 className="font-heading font-bold text-lg text-slate-800">مع نظام ultex بورتنيت</h3>
             </div>
             <ul className="flex flex-col gap-0">
               {successItems.map((item, i) => (
