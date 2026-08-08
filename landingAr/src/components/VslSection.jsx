@@ -45,7 +45,7 @@ export default function VslSection({ onCtaClick, onVideoPlayChange }) {
           <h2 className="font-heading font-bold text-[clamp(1.85rem,7vw,2.75rem)] leading-[1.18] tracking-tight text-[#002B49] text-center">
             ضاعف أرباحك<br />
             <span className="text-[#0159A3] block">في</span>
-            الاستيراد والتصدير بالمغرب
+            الاستيراد والتصدير
           </h2>
         </div>
 
@@ -58,7 +58,7 @@ export default function VslSection({ onCtaClick, onVideoPlayChange }) {
             <div className="hidden lg:flex flex-col gap-7">
               <h2 className="font-heading font-bold text-[clamp(2.3rem,3.8vw,3.4rem)] leading-[1.15] tracking-tight text-[#002B49]">
                 ضاعف أرباحك <span className="text-[#0159A3]">في</span><br />
-                الاستيراد والتصدير بالمغرب
+                الاستيراد والتصدير
               </h2>
               <span className="text-sm font-bold tracking-widest text-orange-500 uppercase">
                 لماذا يجب عليك مشاهدة هذا الفيديو؟

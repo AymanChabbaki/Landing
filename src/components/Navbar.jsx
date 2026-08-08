@@ -70,9 +70,6 @@ export default function Navbar({ onCtaClick }) {
               <a href="https://youtube.com/@joinultex" target="_blank" rel="noreferrer" aria-label="YouTube" className="w-8 h-8 rounded-full bg-slate-50 border border-slate-200/80 flex items-center justify-center text-slate-600 hover:text-brand-blue hover:bg-brand-blue/10 transition-colors">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="w-3.5 h-3.5"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46a2.78 2.78 0 0 0-1.95 1.96A29 29 0 0 0 1 12a29 29 0 0 0 .46 5.58A2.78 2.78 0 0 0 3.41 19.6C5.12 20 12 20 12 20s6.88 0 8.59-.46a2.78 2.78 0 0 0 1.95-1.95A29 29 0 0 0 23 12a29 29 0 0 0-.46-5.58z" /><polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02" fill="currentColor" /></svg>
               </a>
-              <a href="https://wa.me/212774004544" target="_blank" rel="noreferrer" aria-label="WhatsApp" className="w-8 h-8 rounded-full bg-emerald-50 border border-emerald-200/80 flex items-center justify-center hover:bg-emerald-100 transition-transform hover:scale-110 ml-1">
-                <img src="/whatsapp-svgrepo-com.svg" alt="WhatsApp" className="w-4 h-4 object-contain" />
-              </a>
             </div>
 
             {/* Center: CENTERED LOGO */}

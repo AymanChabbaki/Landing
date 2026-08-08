@@ -71,7 +71,7 @@ const OFFICES = [
   {
     label: "مراكش",
     mapsHref: "https://maps.app.goo.gl/E942KwMG9gycFg6y8?g_st=ic",
-    phones: ["(+212) 524-304462", "(+212) 774-004544"],
+    phones: ["(+212) 524-304462"],
   },
 ]
 
