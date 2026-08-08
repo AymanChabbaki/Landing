@@ -43,7 +43,8 @@ export default function VslSection({ onCtaClick, onVideoPlayChange }) {
       <div className="relative z-10 max-w-[1520px] mx-auto px-6 sm:px-12 pt-16 pb-16 sm:pt-28 sm:pb-24">        {/* ─── MOBILE ONLY TITLE (Appears above video) ─── */}
         <div className="flex lg:hidden flex-col gap-3 mb-8 animate-fade-up opacity-0" style={{ animationDelay: '0.2s', animationFillMode: 'forwards' }}>
           <h2 className="font-heading font-bold text-[clamp(1.85rem,7vw,2.75rem)] leading-[1.18] tracking-tight text-[#002B49] text-center">
-            ضاعف أرباحك <span className="text-[#0159A3]">في</span><br />
+            ضاعف أرباحك<br />
+            <span className="text-[#0159A3] block">في</span>
             الاستيراد والتصدير بالمغرب
           </h2>
         </div>
