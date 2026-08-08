@@ -143,24 +143,12 @@ export default function VipForm() {
 
             <h2 className="font-heading font-bold text-[clamp(1.85rem,6vw,3.6rem)] leading-[1.12] tracking-tight text-[#002B49]">
               استمارة{' '}
-              <span className="text-[#0159A3] whitespace-nowrap inline-block">التحقق الجمركي المسبق</span>
+              <span className="text-[#0159A3] whitespace-nowrap inline-block">التحقق الإستباقي ultex</span>
             </h2>
 
             <p className="text-base text-slate-600 leading-relaxed max-w-[420px]">
               يقوم فريقنا الخبير بتحليل ملفك والتواصل معك في أقل من 24 ساعة عبر الواتساب.
             </p>
-
-            {/* Live urgency counter */}
-            <div className="flex items-center gap-3 px-4 py-3 rounded-xl border border-amber-200 bg-amber-50">
-              <div className="flex items-center gap-1.5 shrink-0">
-                <span className="relative flex h-2.5 w-2.5">
-                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-rose-400 opacity-75" />
-                  <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-rose-500" />
-                </span>
-                <span className="text-xs font-bold text-amber-800 uppercase tracking-wider">أماكن محدودة</span>
-              </div>
-              <span className="text-xs text-amber-800 font-medium">متبقي فقط <strong className="text-amber-950 font-bold">3 مقاعد متاحة</strong> هذا الشهر</span>
-            </div>
 
             {/* Live social proof */}
             <div className="flex items-center gap-3 text-xs text-slate-600">
@@ -200,7 +188,7 @@ export default function VipForm() {
                     لنبدأ في تأمين شحنتك
                   </h3>
                   <p className="text-sm text-slate-500 mt-1">
-                    املأ هذه الاستمارة للحصول على التدقيق الجمركي المسبق في أقل من 24 ساعة.
+                    املأ هذه الاستمارة للحصول على مواكبة استباقية فعالة في أقل من 24 ساعة.
                   </p>
                 </div>
 
