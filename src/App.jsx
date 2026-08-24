@@ -1,4 +1,5 @@
 import { useState, useEffect, useRef } from 'react'
+import { Analytics } from '@vercel/analytics/react'
 import SplashScreen from './components/SplashScreen'
 import VipBar from './components/VipBar'
 import Navbar from './components/Navbar'
@@ -74,6 +75,7 @@ export default function App() {
 
   return (
     <>
+      <Analytics />
       <SplashScreen onComplete={() => setSplashDone(true)} />
 
       {/* Full-screen Plane & Boat Transit Overlay */}
