@@ -171,7 +171,7 @@ export default function VslSection({ onCtaClick, onVideoPlayChange }) {
 
               <video
                 ref={videoRef}
-                src="/vsln.mp4"
+                src="/vsl_ar.mp4"
                 className="w-full aspect-video object-cover block"
                 loop
                 playsInline
