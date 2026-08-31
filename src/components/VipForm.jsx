@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import useReveal from '../hooks/useReveal'
+import { getSubmissionMetadata } from '../../shared/submissionMetadata'
 
 const urgencyOptions = [
   {
@@ -89,7 +90,7 @@ export default function VipForm() {
         await fetch(webhookUrl, {
           method: 'POST',
           headers: { 'Content-Type': 'text/plain;charset=utf-8' },
-          body: JSON.stringify(formData),
+          body: JSON.stringify({ ...formData, ...getSubmissionMetadata('fr') }),
         })
       } catch (err) {
         console.error('Google Sheets submission error:', err)
@@ -231,6 +232,9 @@ export default function VipForm() {
                     ))}
                   </div>
 
+                  <p className="mt-4 text-xs text-slate-500">
+                    Pour repérer les demandes répétées, un identifiant aléatoire de navigateur est conservé jusqu’à 90 jours et transmis avec votre demande.
+                  </p>
                   {/* Submit Button */}
                   <div className="mt-8">
                     <button type="submit" disabled={submitting}
