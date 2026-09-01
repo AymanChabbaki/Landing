@@ -56,6 +56,7 @@ const trustPoints = [
 export default function VipForm() {
   const [submitted, setSubmitted] = useState(false)
   const [submitting, setSubmitting] = useState(false)
+  const [submitError, setSubmitError] = useState(false)
   const [formData, setFormData] = useState({
     nom: '', produit: '', pays: '', whatsapp: ''
   })
@@ -82,18 +83,23 @@ export default function VipForm() {
     e.preventDefault()
     if (!validateForm()) return
     setSubmitting(true)
+    setSubmitError(false)
 
-    const webhookUrl = import.meta.env.VITE_GOOGLE_SHEETS_WEBHOOK_URL || 'https://script.google.com/macros/s/AKfycbz5i1Ngwn1fx_Xx5PTGbWOhj4CIldXrlQs7-gB8AVkOCt85dGii-Eqyc-zWwYz6AU71sA/exec'
+    const webhookUrl = import.meta.env.VITE_LEADS_API_URL || '/api/leads'
 
     if (webhookUrl) {
       try {
-        await fetch(webhookUrl, {
+        const response = await fetch(webhookUrl, {
           method: 'POST',
-          headers: { 'Content-Type': 'text/plain;charset=utf-8' },
+          headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({ ...formData, ...getSubmissionMetadata('fr') }),
         })
+        if (!response.ok) throw new Error(`Submission failed (${response.status})`)
       } catch (err) {
         console.error('Google Sheets submission error:', err)
+        setSubmitError(true)
+        setSubmitting(false)
+        return
       }
     }
 
@@ -253,6 +259,7 @@ export default function VipForm() {
                         </svg>
                       )}
                     </button>
+                    {submitError && <p className="mt-3 text-sm text-rose-600">L’envoi a échoué. Veuillez réessayer dans un instant.</p>}
                   </div>
                 </form>
               </div>

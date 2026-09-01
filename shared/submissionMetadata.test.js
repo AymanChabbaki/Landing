@@ -45,3 +45,11 @@ test('unavailable crypto and storage do not stop submission', () => {
   assert.equal(result.visitorId, '')
   assert.equal(result.visitorIdStatus, 'unavailable')
 })
+
+test('includes existing Meta browser cookies', () => {
+  const browser = makeBrowser()
+  browser.document = { cookie: 'theme=dark; _fbp=fb.1.123; _fbc=fb.1.456' }
+  const result = getSubmissionMetadata('fr', browser)
+  assert.equal(result.fbp, 'fb.1.123')
+  assert.equal(result.fbc, 'fb.1.456')
+})

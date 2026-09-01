@@ -28,5 +28,16 @@ export function getSubmissionMetadata(formLanguage, browser = window) {
   } catch {
     // If persistence is blocked, explicitly mark the ID as submission-only.
   }
-  return { visitorId, visitorIdStatus, submittedAt: new Date().toISOString(), formLanguage }
+  const cookies = Object.fromEntries((browser.document?.cookie || '').split(';').map((part) => {
+    const [name, ...rest] = part.trim().split('=')
+    return [name, rest.join('=')]
+  }).filter(([name]) => name))
+  return {
+    visitorId,
+    visitorIdStatus,
+    submittedAt: new Date().toISOString(),
+    formLanguage,
+    fbp: cookies._fbp || '',
+    fbc: cookies._fbc || '',
+  }
 }
