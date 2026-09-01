@@ -51,8 +51,11 @@ function rowObject(headers, row) {
   return Object.fromEntries(headers.map((header, index) => [header, row[index] ?? '']))
 }
 
-function getClientIp(req) {
-  return clean(req.ip || '', 100).replace(/^::ffff:/, '')
+export function getClientIp(req) {
+  const cloudflareIp = clean(req.get?.('cf-connecting-ip'), 100)
+  const forwardedIp = clean(req.get?.('x-forwarded-for'), 500).split(',')[0].trim()
+  const realIp = clean(req.get?.('x-real-ip'), 100)
+  return (cloudflareIp || forwardedIp || realIp || clean(req.ip, 100)).replace(/^::ffff:/, '')
 }
 
 async function ensureHeaders(sheets, spreadsheetId) {
@@ -124,7 +127,6 @@ async function sendMetaEvent(lead, eventId) {
   const userData = {}
   const phone = normalizePhone(lead.whatsapp)
   if (phone) userData.ph = [sha256(phone)]
-  if (lead.client_ip) userData.client_ip_address = lead.client_ip
   if (lead.user_agent) userData.client_user_agent = lead.user_agent
   if (lead.fbp) userData.fbp = lead.fbp
   if (lead.fbc) userData.fbc = lead.fbc
