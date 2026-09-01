@@ -70,7 +70,9 @@ async function ensureHeaders(sheets, spreadsheetId) {
     })
     return
   }
-  if (current.length <= 9) {
+  const missing = HEADERS.filter((header) => !current.includes(header))
+  const isLegacyHeader = current.length <= HEADERS.length && missing.length === HEADERS.length
+  if (current.length <= 9 || isLegacyHeader) {
     await sheets.spreadsheets.values.update({
       spreadsheetId,
       range: sheetRange('A1'),
@@ -79,7 +81,6 @@ async function ensureHeaders(sheets, spreadsheetId) {
     })
     return
   }
-  const missing = HEADERS.filter((header) => !current.includes(header))
   if (missing.length) throw new Error(`Sheet is missing columns: ${missing.join(', ')}`)
 }
 

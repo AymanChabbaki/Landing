@@ -12,8 +12,8 @@ Both forms now include these additional fields in the existing webhook payload:
 The forms now post to `/api/leads`; the previous Apps Script webhook is no longer
 used. Copy `.env.example` to the deployment environment and fill every required
 secret. Share the Google Sheet with the service account's `client_email` as an
-editor. The backend automatically upgrades an existing header row containing
-nine or fewer columns to the schema in `api/index.js`; rows below it are left
+editor. The backend automatically upgrades an existing short or user-labeled
+legacy header row to the schema in `api/index.js`; rows below it are left
 unchanged. Back up the sheet before the first production request.
 
 To send conversions, set a row's `status` to `Qualified`. Vercel checks once per
