@@ -70,6 +70,15 @@ async function ensureHeaders(sheets, spreadsheetId) {
     })
     return
   }
+  if (current.length <= 9) {
+    await sheets.spreadsheets.values.update({
+      spreadsheetId,
+      range: sheetRange('A1'),
+      valueInputOption: 'RAW',
+      requestBody: { values: [HEADERS] },
+    })
+    return
+  }
   const missing = HEADERS.filter((header) => !current.includes(header))
   if (missing.length) throw new Error(`Sheet is missing columns: ${missing.join(', ')}`)
 }
@@ -149,7 +158,7 @@ async function updateMetaColumns(sheets, spreadsheetId, rowNumber, values) {
   })
 }
 
-app.post('/api/process-qualified', async (req, res) => {
+app.all('/api/process-qualified', async (req, res) => {
   if (!process.env.CRON_SECRET || req.get('authorization') !== `Bearer ${process.env.CRON_SECRET}`) {
     return res.status(401).json({ error: 'Unauthorized' })
   }

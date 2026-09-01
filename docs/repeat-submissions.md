@@ -12,12 +12,13 @@ Both forms now include these additional fields in the existing webhook payload:
 The forms now post to `/api/leads`; the previous Apps Script webhook is no longer
 used. Copy `.env.example` to the deployment environment and fill every required
 secret. Share the Google Sheet with the service account's `client_email` as an
-editor. The first row must contain all headers listed in `api/index.js`, in that
-exact order. Existing data should be migrated or backed up before changing it.
+editor. The backend automatically upgrades an existing header row containing
+nine or fewer columns to the schema in `api/index.js`; rows below it are left
+unchanged. Back up the sheet before the first production request.
 
-To send conversions, set a row's `status` to `Qualified`, then POST to
-`/api/process-qualified` with `Authorization: Bearer <CRON_SECRET>`. Schedule that
-request using the hosting provider's cron facility. Successful rows are marked
+To send conversions, set a row's `status` to `Qualified`. Vercel checks once per
+day at 08:00 UTC using `/api/process-qualified` and `CRON_SECRET`. The endpoint
+also accepts an authenticated manual GET or POST. Successful rows are marked
 `meta_event_sent = TRUE`; failures retain an error and attempt count for retry.
 Stable event IDs let Meta deduplicate overlapping retry attempts.
 
