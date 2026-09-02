@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import useReveal from '../hooks/useReveal'
 import { getSubmissionMetadata } from '../../../shared/submissionMetadata'
+import { trackMetaLead } from '../../../shared/metaPixel'
 
 const urgencyOptions = [
   {
@@ -106,12 +107,10 @@ export default function VipForm() {
     setSubmitted(true)
     setSubmitting(false)
 
-    if (typeof window !== 'undefined' && window.fbq) {
-      window.fbq('track', 'Lead', {
-        content_name: 'Formulaire de Pré-Validation VIP',
-        status: 'submitted',
-      })
-    }
+    trackMetaLead({
+      phone: formData.whatsapp,
+      pixelId: import.meta.env.VITE_META_PIXEL_ID || '1381885053982368',
+    })
   }
 
   const inputCls = (field) =>
@@ -225,7 +224,7 @@ export default function VipForm() {
                   </div>
 
                   <p className="mt-4 text-xs text-slate-500">
-                    لرصد الطلبات المتكررة، يتم حفظ معرّف عشوائي للمتصفح لمدة تصل إلى 90 يوماً وإرساله مع طلبك.
+                    لقياس حملاتنا ورصد الطلبات المتكررة، يُرسل رقمك بشكل آمن إلى Meta ويُحفظ معرّف عشوائي للمتصفح لمدة تصل إلى 90 يوماً.
                   </p>
                   {/* Submit Button */}
                   <div className="mt-8">
